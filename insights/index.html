@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Insights · Bond Bell &amp; Co</title>
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header site-header--solid">
+  <a class="wordmark" href="../"><img src="../images/logo-black.png" alt="Bond Bell &amp; Co. Private Wealth Advisors" width="1335" height="250"></a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="../approach/">Approach</a>
+    <a href="../tiers/">Tiers</a>
+    <a href="../about/">About</a>
+    <a href="../contact/">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+  <h1>Insights</h1>
+
+  <noscript><p class="doc-note">This section requires JavaScript.</p></noscript>
+
+  <div id="gate" class="narrow" hidden>
+    <form id="gate-form" class="gate-form" novalidate>
+      <label for="gate-key">Password</label>
+      <input id="gate-key" name="key" type="password" autocomplete="off">
+      <p id="gate-error" class="doc-note" aria-live="polite"></p>
+      <button type="submit" class="cta">Enter</button>
+    </form>
+  </div>
+
+  <div id="insights-index" class="narrow" hidden>
+    <p class="lede">Occasional writing on the mechanics of this kind of wealth. Educational, not advisory.</p>
+    <ul class="doc-list">
+      <li><a href="how-custody-works/">How Custody Works</a></li>
+      <li><a href="vesting-and-cash-flow/">What a Vesting Schedule Does to Cash Flow</a></li>
+      <li><a href="adviser-manager-agent/">The Adviser, the Business Manager, and the Agent</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-wordmark"><img src="../images/logo-cream.png" alt="" width="1335" height="250"></div>
+    <div class="disclosure">
+      <p>Bond Bell &amp; Co LLC is an investment adviser registered in the State of Indiana and notice-filed or registered in California and Texas. Registration does not imply a certain level of skill or training.</p>
+      <p>Information on this site is provided for informational purposes only. It is not investment, tax, or legal advice, and it is not an offer or solicitation to provide advisory services in any jurisdiction where the firm is not registered or exempt from registration.</p>
+      <p>Investing involves risk, including the possible loss of principal. Past performance does not guarantee future results.</p>
+    </div>
+    <nav class="footer-links" aria-label="Disclosures">
+      <a href="../documents/form-adv-part-2a.pdf">Form ADV Part 2A</a>
+      <a href="../documents/form-adv-part-2b.pdf">Form ADV Part 2B</a>
+      <a href="../privacy/">Privacy Policy</a>
+      <a href="https://adviserinfo.sec.gov/firm/summary/342290" rel="noopener noreferrer">SEC Adviser Search, CRD 342290</a>
+      <a href="../disclosures/">Disclosures</a>
+      <a class="discreet" href="./">Insights</a>
+    </nav>
+    <div class="footer-meta">
+      <span>© 2026 Bond Bell &amp; Co LLC · Fort Wayne, Indiana</span>
+      <span>Content last reviewed August 6, 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var KEY = 'bb_insights';
+  var PASS = [112,101,101,107,97,98,111,111].map(function (c) { return String.fromCharCode(c); }).join('');
+  var gate = document.getElementById('gate');
+  var index = document.getElementById('insights-index');
+
+  function open() {
+    gate.hidden = true;
+    index.hidden = false;
+  }
+
+  var stored = false;
+  try { stored = !!sessionStorage.getItem(KEY); } catch (_) {}
+  if (stored) { open(); return; }
+
+  gate.hidden = false;
+
+  var form = document.getElementById('gate-form');
+  var input = document.getElementById('gate-key');
+  var err = document.getElementById('gate-error');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (input.value === PASS) {
+      try { sessionStorage.setItem(KEY, '1'); } catch (_) {}
+      err.textContent = '';
+      open();
+    } else {
+      input.value = '';
+      err.textContent = 'Not recognized.';
+      input.focus();
+    }
+  });
+})();
+</script>
+<script>
+const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }), { rootMargin: '-8% 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
