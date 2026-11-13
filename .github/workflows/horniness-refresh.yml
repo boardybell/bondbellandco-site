@@ -25,6 +25,7 @@ jobs:
       - name: Refresh edition and prices
         env:
           HI_SITE_DIR: ${{ github.workspace }}
+          HI_SOURCE_URL: ${{ secrets.HI_SOURCE_URL }}
         run: |
           node .github/horniness/snapshot.mjs
           node .github/horniness/prices.mjs || echo "price refresh failed; previous prices kept"

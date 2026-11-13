@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // The Horniness Index: refresh the bundled editorial edition from the published dashboard.
 //
-// The hosted dashboard (horniness-index.null-value.chatgpt.site) stays the source of truth for
+// The hosted dashboard stays the source of truth for
 // ingestion, owner review, scoring, watchlists and snapshots. This site is a static public reader:
 // its read API answers anonymously but sends no CORS headers, so browsers on bondbellandco.com
 // cannot call it. This script makes the server-to-server read instead, at publish time:
@@ -18,7 +18,10 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 // HI_SITE_DIR: folder that contains horniness-index/ (default: this repo's site/; the scheduled refresh in the public repo sets it to the repo root).
 const SITE = process.env.HI_SITE_DIR ? path.resolve(process.env.HI_SITE_DIR) : path.join(HERE, '../../site');
 const OUT = path.join(SITE, 'horniness-index/data.js');
-const BASE = 'https://horniness-index.null-value.chatgpt.site';
+// Source address is never published: env HI_SOURCE_URL (GitHub secret in the public repo's Action), else the
+// private repo's scripts/horniness/.source-url (excluded from the public copy by deploy.sh).
+const BASE = (process.env.HI_SOURCE_URL || (() => { try { return fs.readFileSync(path.join(HERE, '.source-url'), 'utf8'); } catch { return ''; } })()).trim().replace(/\/$/, '');
+if (!/^https:\/\//.test(BASE)) { console.error('no source URL configured (HI_SOURCE_URL or .source-url); keeping the current edition'); process.exit(0); }
 const PATHS = { intelligence: '/api/intelligence', prices: '/api/valuation-prices' };
 const TIMEOUT_MS = 15000;
 
@@ -95,10 +98,10 @@ if (live) {
 }
 data.valuation = valuation;
 data.studies = studies;
-data.links = { dashboard: BASE + '/', valuation: BASE + '/?view=valuation' };
+delete data.links; // the public page never links to the source dashboard
 
 // Only publish a new edition when the content changed (timestamps alone never trigger a write).
-const content = (d) => JSON.stringify(d && { cases: d.cases, stories: d.stories, prices: d.prices, sourceAsOf: d.sourceAsOf, valuation: d.valuation, studies: d.studies });
+const content = (d) => JSON.stringify(d && { cases: d.cases, stories: d.stories, prices: d.prices, sourceAsOf: d.sourceAsOf, valuation: d.valuation, studies: d.studies, links: d.links ?? null });
 if (live && previous && content(previous) === content(data)) {
   console.log('unchanged: edition of ' + previous.fetchedAt + ' is current; nothing written');
   process.exit(0);
