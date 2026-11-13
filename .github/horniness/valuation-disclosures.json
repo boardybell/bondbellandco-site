@@ -1,0 +1,526 @@
+{
+ "nestle-freixe-2025": {
+  "sourceUrl": "https://www.nestle.com/sites/default/files/2026-02/financial-statements-2025-en.pdf",
+  "sourceLabel": "Nestlé 2025 financial statements",
+  "levels": [],
+  "note": "Nestlé reports fiscal year-end market capitalization in Swiss francs. The fiscal-year valuation and earnings figures include other developments during the period.",
+  "fundamentals": {
+   "sourceUrl": "https://www.nestle.com/sites/default/files/2026-02/financial-statements-2025-en.pdf",
+   "sourceLabel": "Nestlé 2025 financial statements · five-year review",
+   "currency": "CHF",
+   "periods": [
+    {
+     "date": "2022-12-31",
+     "revenue": 94424000000,
+     "netIncome": 9270000000,
+     "marketCap": 285865000000
+    },
+    {
+     "date": "2023-12-31",
+     "revenue": 92998000000,
+     "netIncome": 11209000000,
+     "marketCap": 255604000000
+    },
+    {
+     "date": "2024-12-31",
+     "revenue": 91354000000,
+     "netIncome": 10884000000,
+     "marketCap": 192645000000
+    },
+    {
+     "date": "2025-12-31",
+     "revenue": 89490000000,
+     "netIncome": 9033000000,
+     "marketCap": 202537000000
+    }
+   ]
+  }
+ },
+ "kohls-buchanan-2025": {
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/885639/000119312526115982/kss-20260131.htm",
+  "sourceLabel": "Kohl’s fiscal 2025 Form 10-K · Item 5",
+  "levels": [
+   {
+    "date": "2024-02-03",
+    "value": 70.25
+   },
+   {
+    "date": "2025-02-01",
+    "value": 38.9
+   },
+   {
+    "date": "2026-01-31",
+    "value": 53.59
+   }
+  ],
+  "fundamentals": {
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/885639/000119312526115982/kss-20260131.htm",
+   "sourceLabel": "Kohl’s fiscal 2025 Form 10-K · income statement",
+   "currency": "USD",
+   "periods": [
+    {
+     "date": "2024-02-03",
+     "revenue": 16586000000,
+     "netIncome": 317000000
+    },
+    {
+     "date": "2025-02-01",
+     "revenue": 15385000000,
+     "netIncome": 109000000
+    },
+    {
+     "date": "2026-01-31",
+     "revenue": 14775000000,
+     "netIncome": 272000000
+    }
+   ]
+  },
+  "note": "Revenue figures represent net sales."
+ },
+ "wwe-mcmahon-sec-2025": {
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1091907/000119312523233499/d519698d8k.htm",
+  "sourceLabel": "WWE September 2023 Form 8-K · delisting",
+  "levels": [],
+  "note": "WWE ceased trading as a standalone listed security in 2023. Its historical stock series does not span the January 2025 SEC announcement."
+ },
+ "norfolk-shaw-2024": {
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/702165/000119312526127620/R2.htm",
+  "sourceLabel": "Norfolk Southern 2026 proxy · pay versus performance table",
+  "levels": [
+   {
+    "date": "2022-12-31",
+    "value": 107
+   },
+   {
+    "date": "2023-12-31",
+    "value": 106
+   },
+   {
+    "date": "2024-12-31",
+    "value": 107
+   },
+   {
+    "date": "2025-12-31",
+    "value": 135
+   }
+  ],
+  "fundamentals": {
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/702165/000162828026006268/nsc-20251231.htm",
+   "sourceLabel": "Norfolk Southern 2025 Form 10-K · consolidated results",
+   "currency": "USD",
+   "periods": [
+    {
+     "date": "2023-12-31",
+     "revenue": 12156000000,
+     "netIncome": 1827000000
+    },
+    {
+     "date": "2024-12-31",
+     "revenue": 12123000000,
+     "netIncome": 2622000000
+    },
+    {
+     "date": "2025-12-31",
+     "revenue": 12180000000,
+     "netIncome": 2873000000
+    }
+   ]
+  },
+  "note": "The issuer cites the East Palestine derailment in 2023 and improved business performance in 2024 and 2025 in its discussion of shareholder returns."
+ },
+ "bp-looney-2023": {
+  "sourceUrl": "https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/investors/bp-annual-report-and-form-20f-2024.pdf",
+  "sourceLabel": "BP 2024 annual report and Form 20-F · shareholder return on page 15",
+  "levels": [
+   {
+    "date": "2021-12-31",
+    "value": 100
+   },
+   {
+    "date": "2022-12-31",
+    "value": 136.9
+   },
+   {
+    "date": "2023-12-31",
+    "value": 144.9771
+   },
+   {
+    "date": "2024-12-31",
+    "value": 127.7248251
+   }
+  ],
+  "fundamentals": {
+   "sourceUrl": "https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/investors/bp-annual-report-and-form-20f-2024.pdf",
+   "sourceLabel": "BP 2024 annual report and Form 20-F · income statement",
+   "currency": "USD",
+   "periods": [
+    {
+     "date": "2022-12-31",
+     "revenue": 241392000000,
+     "netIncome": -2487000000
+    },
+    {
+     "date": "2023-12-31",
+     "revenue": 210130000000,
+     "netIncome": 15239000000
+    },
+    {
+     "date": "2024-12-31",
+     "revenue": 189185000000,
+     "netIncome": 381000000
+    }
+   ]
+  },
+  "note": "Return levels compound BP’s reported annual total returns for its U.S.-listed depositary shares from a base of 100 in 2021. Revenue represents sales and other operating revenues. Profit or loss is attributable to BP shareholders."
+ },
+ "cboe-tilly-2023": {
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1374310/000162828025006984/cboe-20241231.htm",
+  "sourceLabel": "Cboe 2024 Form 10-K · Item 5",
+  "levels": [
+   {
+    "date": "2021-12-31",
+    "value": 112.12
+   },
+   {
+    "date": "2022-12-31",
+    "value": 109.69
+   },
+   {
+    "date": "2023-12-31",
+    "value": 158.37
+   },
+   {
+    "date": "2024-12-31",
+    "value": 175.4
+   }
+  ],
+  "fundamentals": {
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1374310/000162828025006984/cboe-20241231.htm",
+   "sourceLabel": "Cboe 2024 Form 10-K · income statement",
+   "currency": "USD",
+   "periods": [
+    {
+     "date": "2022-12-31",
+     "revenue": 3958500000,
+     "netIncome": 235000000
+    },
+    {
+     "date": "2023-12-31",
+     "revenue": 3773500000,
+     "netIncome": 761400000
+    },
+    {
+     "date": "2024-12-31",
+     "revenue": 4094500000,
+     "netIncome": 764900000
+    }
+   ]
+  }
+ },
+ "mcd-easterbrook-2019": {
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/63908/000006390822000011/mcd1231202110k.pdf",
+  "sourceLabel": "McDonald’s 2021 annual report · stock performance graph",
+  "levels": [
+   {
+    "date": "2017-12-31",
+    "value": 145
+   },
+   {
+    "date": "2018-12-31",
+    "value": 153
+   },
+   {
+    "date": "2019-12-31",
+    "value": 175
+   },
+   {
+    "date": "2020-12-31",
+    "value": 195
+   },
+   {
+    "date": "2021-12-31",
+    "value": 249
+   }
+  ],
+  "fundamentals": {
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/63908/000006390822000011/mcd1231202110k.pdf",
+   "sourceLabel": "McDonald’s 2021 annual report · income statement",
+   "currency": "USD",
+   "periods": [
+    {
+     "date": "2018-12-31",
+     "revenue": 21025200000,
+     "netIncome": 5924300000,
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/63908/000006390820000022/mcd-12312019x10k.htm"
+    },
+    {
+     "date": "2019-12-31",
+     "revenue": 21364400000,
+     "netIncome": 6025400000
+    },
+    {
+     "date": "2020-12-31",
+     "revenue": 19207800000,
+     "netIncome": 4730500000
+    },
+    {
+     "date": "2021-12-31",
+     "revenue": 23222900000,
+     "netIncome": 7545200000
+    }
+   ]
+  },
+  "note": "Annual comparisons include the COVID-19 disruption in 2020 and the issuer’s December 2021 settlement announcement."
+ },
+ "cbs-moonves-2018": {
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/813828/000081382819000006/cbs_10k-123118.htm",
+  "sourceLabel": "CBS 2018 Form 10-K · Class B stock performance graph",
+  "levels": [
+   {
+    "date": "2015-12-31",
+    "value": 75
+   },
+   {
+    "date": "2016-12-31",
+    "value": 103
+   },
+   {
+    "date": "2017-12-31",
+    "value": 97
+   },
+   {
+    "date": "2018-12-31",
+    "value": 73
+   }
+  ],
+  "fundamentals": {
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/813828/000081382819000006/cbs_10k-123118.htm",
+   "sourceLabel": "CBS 2018 Form 10-K · consolidated results",
+   "currency": "USD",
+   "periods": [
+    {
+     "date": "2017-12-31",
+     "revenue": 13692000000,
+     "netIncome": 357000000
+    },
+    {
+     "date": "2018-12-31",
+     "revenue": 14514000000,
+     "netIncome": 1960000000
+    }
+   ]
+  },
+  "note": "The 2017 net earnings figure includes $952 million of losses from discontinued operations. The historical series stops at 2018 before the Viacom combination."
+ },
+ "wynn-governance-2018": {
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1174922/000117492220000024/wynn-20191231.htm",
+  "sourceLabel": "Wynn Resorts 2019 Form 10-K",
+  "levels": [],
+  "fundamentals": {
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1174922/000117492220000024/wynn-20191231.htm",
+   "sourceLabel": "Wynn Resorts 2019 Form 10-K · selected financial data",
+   "currency": "USD",
+   "periods": [
+    {
+     "date": "2017-12-31",
+     "revenue": 6070160000,
+     "netIncome": 747181000
+    },
+    {
+     "date": "2018-12-31",
+     "revenue": 6717660000,
+     "netIncome": 572430000
+    },
+    {
+     "date": "2019-12-31",
+     "revenue": 6611099000,
+     "netIncome": 122985000
+    }
+   ]
+  },
+  "note": "Net income is attributable to Wynn Resorts, Limited. The 2018 filing reports tax effects and a separate litigation settlement expense in the same year."
+ },
+ "intel-krzanich-2018": {
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/50863/000005086320000011/a12282019q4-10kdocument.htm",
+  "sourceLabel": "Intel 2019 Form 10-K · stockholder return table",
+  "levels": [
+   {
+    "date": "2016-12-31",
+    "value": 103
+   },
+   {
+    "date": "2017-12-30",
+    "value": 135
+   },
+   {
+    "date": "2018-12-29",
+    "value": 140
+   },
+   {
+    "date": "2019-12-28",
+    "value": 184
+   }
+  ],
+  "fundamentals": {
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/50863/000005086320000011/a12282019q4-10kdocument.htm",
+   "sourceLabel": "Intel 2019 Form 10-K · income statement",
+   "currency": "USD",
+   "periods": [
+    {
+     "date": "2017-12-30",
+     "revenue": 62761000000,
+     "netIncome": 9601000000
+    },
+    {
+     "date": "2018-12-29",
+     "revenue": 70848000000,
+     "netIncome": 21053000000
+    },
+    {
+     "date": "2019-12-28",
+     "revenue": 71965000000,
+     "netIncome": 21048000000
+    }
+   ]
+  }
+ },
+ "lululemon-potdevin-2018": {
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1397187/000139718720000012/lulu-20200202x10k.htm",
+  "sourceLabel": "lululemon fiscal 2019 Form 10-K · performance graph",
+  "levels": [
+   {
+    "date": "2017-01-29",
+    "value": 100.88
+   },
+   {
+    "date": "2018-01-28",
+    "value": 119.38
+   },
+   {
+    "date": "2019-02-03",
+    "value": 220.59
+   },
+   {
+    "date": "2020-02-02",
+    "value": 361.4
+   }
+  ],
+  "fundamentals": {
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1397187/000139718720000012/lulu-20200202x10k.htm",
+   "sourceLabel": "lululemon fiscal 2019 Form 10-K · consolidated results",
+   "currency": "USD",
+   "periods": [
+    {
+     "date": "2018-01-28",
+     "revenue": 2649181000,
+     "netIncome": 258662000
+    },
+    {
+     "date": "2019-02-03",
+     "revenue": 3288319000,
+     "netIncome": 483801000
+    },
+    {
+     "date": "2020-02-02",
+     "revenue": 3979296000,
+     "netIncome": 645596000
+    }
+   ]
+  }
+ },
+ "bestbuy-dunn-2012": {
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/764478/000076447814000011/bby-2014x10k.htm",
+  "sourceLabel": "Best Buy fiscal 2014 Form 10-K · performance graph",
+  "levels": [
+   {
+    "date": "2012-03-03",
+    "value": 89.04
+   },
+   {
+    "date": "2013-02-02",
+    "value": 61.33
+   },
+   {
+    "date": "2014-02-01",
+    "value": 91.65
+   }
+  ],
+  "fundamentals": {
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/764478/000076447814000011/bby-2014x10k.htm",
+   "sourceLabel": "Best Buy fiscal 2014 Form 10-K · selected financial data",
+   "currency": "USD",
+   "periods": [
+    {
+     "date": "2012-03-03",
+     "revenue": 45457000000,
+     "netIncome": -1231000000
+    },
+    {
+     "date": "2013-02-02",
+     "revenue": 39827000000,
+     "netIncome": -441000000
+    },
+    {
+     "date": "2014-02-01",
+     "revenue": 42410000000,
+     "netIncome": 532000000
+    }
+   ]
+  },
+  "note": "The event-containing fiscal period ended February 2, 2013 and lasted 11 months after a change in fiscal year-end."
+ },
+ "hp-hurd-2010": {
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/47217/000104746912011417/a2211959z10-k.htm",
+  "sourceLabel": "Hewlett-Packard 2012 Form 10-K · stock performance graph",
+  "levels": [
+   {
+    "date": "2008-10-31",
+    "value": 74.57
+   },
+   {
+    "date": "2009-10-31",
+    "value": 93.31
+   },
+   {
+    "date": "2010-10-31",
+    "value": 83.23
+   },
+   {
+    "date": "2011-10-31",
+    "value": 53.35
+   },
+   {
+    "date": "2012-10-31",
+    "value": 28.41
+   }
+  ],
+  "fundamentals": {
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/47217/000104746912011417/a2211959z10-k.htm",
+   "sourceLabel": "Hewlett-Packard 2012 Form 10-K · selected financial data",
+   "currency": "USD",
+   "periods": [
+    {
+     "date": "2009-10-31",
+     "revenue": 114552000000,
+     "netIncome": 7660000000
+    },
+    {
+     "date": "2010-10-31",
+     "revenue": 126033000000,
+     "netIncome": 8761000000
+    },
+    {
+     "date": "2011-10-31",
+     "revenue": 127245000000,
+     "netIncome": 7074000000
+    },
+    {
+     "date": "2012-10-31",
+     "revenue": 120357000000,
+     "netIncome": -12650000000
+    }
+   ]
+  },
+  "note": "The series concerns the historical Hewlett-Packard issuer before the 2015 separation."
+ }
+}

@@ -1,0 +1,61 @@
+{
+  "purpose": "Current corporate identity marks for company identification, not event photography.",
+  "assets": [
+    {
+      "asset": "/brands/nestle.svg",
+      "source": "https://www.nestle.com/themes/custom/da_vinci_code/images/favicons/safari-pinned-tab.svg",
+      "collection": "Official company website asset",
+      "license": "Trademark identification; no endorsement implied",
+      "sha256": "a12a5d6c9c0de5bd30494ed03429d3d59480dcfaf44dc2501c426ae30572b8fc",
+      "dimensions": "0 0 640.000000 640.000000"
+    },
+    {
+      "asset": "/brands/kohls.png",
+      "source": "https://images.squarespace-cdn.com/content/v1/64027b95e98f20265f6f7323/b4eb6638-4c67-49ef-86c9-3705a8f754a8/kohls-logo_berry_200px.png?format=1500w",
+      "collection": "Official company website asset",
+      "license": "Trademark identification; no endorsement implied",
+      "sha256": "6b569a3b43564fd6d4558dbb989d1834e4e359977a86f1c960c8f666d76c673e",
+      "dimensions": "(200, 30)"
+    },
+    {
+      "asset": "/brands/norfolk-southern.svg",
+      "source": "https://www.norfolksouthern.com/content/dam/nscorp/images/logos/Logo.svg",
+      "collection": "Official company website asset",
+      "license": "Trademark identification; no endorsement implied",
+      "sha256": "1897915d155bc7b9b28e5d22e1795b59203a28da219d5c745830658d9381fee7",
+      "dimensions": "0 0 152 40"
+    },
+    {
+      "asset": "/brands/wynn.png",
+      "source": "https://images.ctfassets.net/d25vj3coyj0e/1yWB7bkYGT5alNEF5Wzvww/522dd51c67c7316c8be7914623430165/logo.png",
+      "collection": "Official company website asset",
+      "license": "Trademark identification; no endorsement implied",
+      "sha256": "e20eccf05b6bb1273269cd6cf31f811cf5c2b95c84d7c2e33a33fcf6ad4a5237",
+      "dimensions": "(265, 119)"
+    },
+    {
+      "asset": "/brands/lululemon.svg",
+      "source": "https://corporate.lululemon.com/~/media/Images/L/Lululemon/logo/logo-black-full.svg",
+      "collection": "Official company website asset",
+      "license": "Trademark identification; no endorsement implied",
+      "sha256": "c9209547bbe8908684425953e628add806173ed7c6f825e9ee3830c35cea85ff",
+      "dimensions": "0 0 120 17"
+    },
+    {
+      "asset": "/brands/bestbuy.png",
+      "source": "https://corporate.bestbuy.com/wp-content/uploads/thegem-logos/logo_0717ce843a2125d21ef450e7f05f352e_1x.png",
+      "collection": "Official company website asset",
+      "license": "Trademark identification; no endorsement implied",
+      "sha256": "a9ca039470dc5d38847e0937e0c79e91537ec433bfe918402c368d59ad1c4cc9",
+      "dimensions": "(116, 79)"
+    },
+    {
+      "asset": "/brands/cboe.svg",
+      "source": "https://www.cboe.com",
+      "collection": "Official company website header SVG",
+      "license": "Trademark identification; no endorsement implied",
+      "sha256": "208d6a1d42345ca8f69eadba93f05af82b8c57aee1eb16aaeca6b54b08f706b1",
+      "dimensions": "0 0 303.4 100.2"
+    }
+  ]
+}

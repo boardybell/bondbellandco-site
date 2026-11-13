@@ -1,0 +1,6 @@
+[
+ {"value":"−3.1%","label":"Mean 3-session market-adjusted return","description":"The median was −1.1%. Shares rose on a market-adjusted basis in 11 of the 38 cases.","source":"Larcker & Tayan, 2016","url":"https://gsbpreserve.stanford.edu/file/87500/content"},
+ {"value":"−4.06%","label":"Mean 3-session abnormal return","description":"Across 113 CEO observations. The median was −1.84%. The study used a window centered on disclosure.","source":"Cline, Walkling & Yore · Table 5","url":"https://content.tcmediasaffaires.com/LAF/lacom/sex_lies_firm-value.pdf"},
+ {"value":"−13.76%","label":"250-session abnormal return","description":"The authors’ matched buy-and-hold estimate for CEO cases after disclosure.","source":"Cline, Walkling & Yore · Appendix E, note 35","url":"https://content.tcmediasaffaires.com/LAF/lacom/sex_lies_firm-value.pdf"},
+ {"value":"−0.21×","label":"Change in Tobin’s Q","description":"Estimated change in the firm-value-to-assets measure for CEO cases over the fiscal year containing disclosure.","source":"Cline, Walkling & Yore · Appendix E","url":"https://content.tcmediasaffaires.com/LAF/lacom/sex_lies_firm-value.pdf"}
+]

@@ -1,0 +1,485 @@
+{
+ "asOf": "2026-11-09",
+ "cases": [
+  {
+   "id": "nestle-freixe-2025",
+   "ticker": "NESN",
+   "company": "Nestlé",
+   "executive": "Laurent Freixe",
+   "eventDate": "2025-09-01",
+   "title": "CEO dismissed after undisclosed reporting-line relationship",
+   "summary": "Nestlé said an investigation supported by independent outside counsel established an undisclosed relationship with a direct subordinate that breached its conduct code. The board dismissed Laurent Freixe and appointed Philipp Navratil immediately. The record concerns the company's disclosure and governance requirements.",
+   "status": "Official finding",
+   "historical": true,
+   "resolution": "The official announcement records dismissal and succession. It does not establish a quantified financial loss or a broader legal outcome.",
+   "sourceUrl": "https://www.nestle.com/sites/default/files/2025-09/executive-board-changes-september-2025-pr-en.pdf",
+   "sourceName": "Nestlé ad hoc announcement",
+   "sourcePublishedAt": "2025-09-01",
+   "verifiedAt": "2026-11-10T03:49:24.253Z",
+   "category": "Policy & conflicts",
+   "financialFacts": [],
+   "milestones": [
+    {
+     "date": "2025-09-01",
+     "title": "Board announces dismissal and immediate successor",
+     "sourceUrl": "https://www.nestle.com/sites/default/files/2025-09/executive-board-changes-september-2025-pr-en.pdf"
+    }
+   ],
+   "currentRelevance": "A documented 2025 governance case involving the executive named at the time; no score is assigned to today's CEO.",
+   "listingNote": "NESN is the Swiss-listed share symbol; this casebook includes selected international issuers."
+  },
+  {
+   "id": "kohls-buchanan-2025",
+   "ticker": "KSS",
+   "company": "Kohl's",
+   "executive": "J. Ashley Buchanan",
+   "eventDate": "2025-04-30",
+   "title": "Vendor conflicts lead to termination for cause",
+   "summary": "Kohl's disclosed that an outside-counsel investigation found Buchanan directed vendor and consulting business involving an undisclosed personal conflict. The board terminated him for cause on April 30 and appointed an interim CEO. Its filing required forfeiture of equity awards and reimbursement of part of his signing incentive.",
+   "status": "Official finding",
+   "historical": true,
+   "resolution": "Termination and contractual recovery requirements are documented. The cited filing does not verify receipt of the required reimbursement.",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/885639/000119312525109074/d925446d8k.htm",
+   "sourceName": "Kohl's Form 8-K",
+   "sourcePublishedAt": "2025-05-01",
+   "verifiedAt": "2026-11-10T03:49:24.253Z",
+   "category": "Policy & conflicts",
+   "financialFacts": [
+    {
+     "amount": 2500000,
+     "currency": "USD",
+     "kind": "Company recovery",
+     "label": "Required signing-incentive reimbursement; receipt is not verified by this filing.",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/885639/000119312525109074/d925446d8k.htm",
+     "amountQualifier": "exact",
+     "qualifier": "required"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2025-04-30",
+     "title": "Board terminates CEO for cause and appoints interim successor",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/885639/000119312525109074/d925446d8k.htm"
+    },
+    {
+     "date": "2025-05-01",
+     "title": "Company publishes conflict findings and recovery requirements",
+     "sourceUrl": "https://corporate.kohls.com/news/kohls-announces-ceo-transition-process-2"
+    }
+   ],
+   "currentRelevance": "A historical conflict-of-interest and succession record; the required recovery is not an estimate of stock-market loss."
+  },
+  {
+   "id": "wwe-mcmahon-sec-2025",
+   "ticker": "WWE",
+   "company": "World Wrestling Entertainment",
+   "executive": "Vince McMahon",
+   "eventDate": "2025-01-10",
+   "title": "Undisclosed settlements trigger SEC accounting-control settlement",
+   "summary": "The SEC announced settled charges concerning agreements McMahon did not disclose to WWE's board, accounting staff or auditor. Its order found resulting accounting and reporting failures. Without admitting or denying the findings, McMahon agreed to a personal civil penalty and reimbursement to WWE.",
+   "status": "Resolved",
+   "historical": true,
+   "resolution": "The specified SEC enforcement matter was settled. This entry does not characterize the outcome of separate allegations or proceedings.",
+   "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2025-1",
+   "sourceName": "U.S. Securities and Exchange Commission",
+   "sourcePublishedAt": "2025-01-10",
+   "verifiedAt": "2026-11-10T03:49:24.253Z",
+   "category": "Legal & financial",
+   "financialFacts": [
+    {
+     "amount": 1330915.9,
+     "currency": "USD",
+     "kind": "Company recovery",
+     "label": "Reimbursement to WWE agreed in the SEC settlement; not a stock-price loss.",
+     "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2025-1",
+     "amountQualifier": "exact",
+     "qualifier": "agreed"
+    },
+    {
+     "amount": 400000,
+     "currency": "USD",
+     "kind": "Personal penalty",
+     "label": "Civil penalty agreed by McMahon personally; not a fine imposed on WWE.",
+     "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2025-1",
+     "amountQualifier": "exact",
+     "qualifier": "agreed"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2025-01-10",
+     "title": "SEC announces settled accounting-control and disclosure charges",
+     "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2025-1"
+    }
+   ],
+   "currentRelevance": "A former executive's settled SEC matter illustrating corporate control exposure; it is not a current management score.",
+   "listingNote": "WWE is the historical issuer symbol associated with the underlying financial statements."
+  },
+  {
+   "id": "norfolk-shaw-2024",
+   "ticker": "NSC",
+   "company": "Norfolk Southern",
+   "executive": "Alan H. Shaw",
+   "eventDate": "2024-09-11",
+   "title": "Board terminates CEO for policy violations",
+   "summary": "Norfolk Southern said preliminary findings from its investigation established a company-policy violation involving its CEO and chief legal officer. It terminated Shaw for cause and appointed CFO Mark George. The company explicitly separated the leadership action from its financial reporting and operating results.",
+   "status": "Official disclosure",
+   "historical": true,
+   "resolution": "The board's termination and succession decision is documented. The cited announcement described the underlying investigation as ongoing.",
+   "sourceUrl": "https://www.norfolksouthern.com/en/newsroom/news-releases/norfolk-southern-board-of-directors-appoints-mark-r-george-president-and-chief-executive-officer-through-unanimous-vote-of-independent-directors",
+   "sourceName": "Norfolk Southern board announcement",
+   "sourcePublishedAt": "2024-09-11",
+   "verifiedAt": "2026-11-10T03:49:24.253Z",
+   "category": "Leadership",
+   "financialFacts": [],
+   "milestones": [
+    {
+     "date": "2024-09-08",
+     "title": "Board confirms independent investigation",
+     "sourceUrl": "https://www.norfolksouthern.com/en/newsroom/news-archive/2024/statement-regarding-investigation-of-alleged-misconduct"
+    },
+    {
+     "date": "2024-09-11",
+     "title": "Board announces termination for cause and succession",
+     "sourceUrl": "https://www.norfolksouthern.com/en/newsroom/news-releases/norfolk-southern-board-of-directors-appoints-mark-r-george-president-and-chief-executive-officer-through-unanimous-vote-of-independent-directors"
+    }
+   ],
+   "currentRelevance": "A 2024 leadership-disruption record involving a former CEO; no operating loss or present CEO misconduct is inferred."
+  },
+  {
+   "id": "bp-looney-2023",
+   "ticker": "BP",
+   "company": "BP",
+   "executive": "Bernard Looney",
+   "eventDate": "2023-09-12",
+   "title": "Disclosure failures lead to dismissal and remuneration forfeiture",
+   "summary": "BP said Looney resigned after acknowledging incomplete assurances about past workplace relationships. In December, its board concluded that he had knowingly misled it, determined this was serious misconduct and ended his notice period. BP reported a maximum potential value of remuneration forfeited or clawed back.",
+   "status": "Official finding",
+   "historical": true,
+   "resolution": "Dismissal and the stated compensation consequences are documented. The headline figure includes contingent awards and assumptions, not a cash loss suffered by shareholders.",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/313807/000165495423015466/a6931w.htm",
+   "sourceName": "BP announcement furnished on Form 6-K",
+   "sourcePublishedAt": "2023-12-13",
+   "verifiedAt": "2026-11-10T03:49:24.253Z",
+   "category": "Governance",
+   "financialFacts": [
+    {
+     "amount": 32426000,
+     "currency": "GBP",
+     "kind": "Compensation forfeited",
+     "label": "Maximum potential remuneration forfeited or clawed back, using BP's December 2023 assumptions; not cash paid or a company loss.",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/313807/000165495423015466/a6931w.htm",
+     "amountQualifier": "up-to",
+     "qualifier": "maximum-potential"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2023-09-12",
+     "title": "CEO resignation disclosed in the subsequent remuneration announcement",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/313807/000165495423015466/a6931w.htm"
+    },
+    {
+     "date": "2023-12-13",
+     "title": "Board announces dismissal and affected remuneration",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/313807/000165495423015466/a6931w.htm"
+    }
+   ],
+   "currentRelevance": "Historical disclosure and compensation-control case; the compensation figure must not be added to company fines or treated as market loss."
+  },
+  {
+   "id": "cboe-tilly-2023",
+   "ticker": "CBOE",
+   "company": "Cboe Global Markets",
+   "executive": "Edward T. Tilly",
+   "eventDate": "2023-09-18",
+   "title": "Undisclosed colleague relationships prompt CEO resignation",
+   "summary": "Cboe's filing said a board investigation with independent counsel found Tilly failed to disclose personal relationships with colleagues, contrary to company policy. He resigned from his executive and board roles. Cboe said the conduct did not affect its market operations, financial reporting or internal controls.",
+   "status": "Official finding",
+   "historical": true,
+   "resolution": "The investigation conclusion, resignation and replacement are documented. No quantified company loss is established by this record.",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1374310/000110465923101775/tm2326345d1_8k.htm",
+   "sourceName": "Cboe Global Markets Form 8-K",
+   "sourcePublishedAt": "2023-09-19",
+   "verifiedAt": "2026-11-10T03:49:24.253Z",
+   "category": "Policy & conflicts",
+   "financialFacts": [],
+   "milestones": [
+    {
+     "date": "2023-09-18",
+     "title": "CEO and board resignation takes effect",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1374310/000110465923101775/tm2326345d1_8k.htm"
+    },
+    {
+     "date": "2023-09-19",
+     "title": "Company publishes investigation conclusion and succession",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1374310/000110465923101775/tm2326345d1_ex99-1.htm"
+    }
+   ],
+   "currentRelevance": "A prior CEO's policy-disclosure case, not an allegation about the current Cboe leadership."
+  },
+  {
+   "id": "mcd-easterbrook-2019",
+   "ticker": "MCD",
+   "company": "McDonald's",
+   "executive": "Steve Easterbrook",
+   "eventDate": "2019-11-03",
+   "title": "Clawback and SEC disclosure settlement follow CEO departure",
+   "summary": "McDonald's announced Easterbrook's departure after a board policy finding. In 2021 it announced recovery of cash and equity then worth more than $105 million. In 2023, the SEC settled related disclosure charges; Easterbrook accepted a personal penalty without admitting or denying the findings, while McDonald's received no monetary penalty.",
+   "status": "Resolved",
+   "historical": true,
+   "resolution": "McDonald's announced settlement of its lawsuit in December 2021. The SEC announced its related settled orders in January 2023.",
+   "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2023-4",
+   "sourceName": "SEC and McDonald's official releases",
+   "sourcePublishedAt": "2023-01-09",
+   "verifiedAt": "2026-11-10T03:49:24.253Z",
+   "category": "Legal & financial",
+   "financialFacts": [
+    {
+     "amount": 105000000,
+     "currency": "USD",
+     "kind": "Company recovery",
+     "label": "More than $105 million of cash and equity returned, valued at the December 2021 announcement; not a stock-market-loss estimate.",
+     "sourceUrl": "https://corporate.mcdonalds.com/corpmcd/our-stories/article/resolve-lawsuit.html",
+     "amountQualifier": "more-than",
+     "qualifier": "more-than"
+    },
+    {
+     "amount": 400000,
+     "currency": "USD",
+     "kind": "Personal penalty",
+     "label": "Easterbrook's agreed SEC civil penalty. The SEC imposed no financial penalty on McDonald's.",
+     "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2023-4",
+     "amountQualifier": "exact",
+     "qualifier": "agreed"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2019-11-03",
+     "title": "Company announces policy finding and CEO transition",
+     "sourceUrl": "https://corporate.mcdonalds.com/corpmcd/our-stories/article/leadership-change.html"
+    },
+    {
+     "date": "2021-12-16",
+     "title": "Company announces settlement and recovery of awards and cash",
+     "sourceUrl": "https://corporate.mcdonalds.com/corpmcd/our-stories/article/resolve-lawsuit.html"
+    },
+    {
+     "date": "2023-01-09",
+     "title": "SEC announces settled disclosure orders",
+     "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2023-4"
+    }
+   ],
+   "currentRelevance": "Resolved proceedings involving a former CEO; these facts do not assign exposure to Chris Kempczinski or today's management."
+  },
+  {
+   "id": "cbs-moonves-2018",
+   "ticker": "CBS",
+   "company": "CBS",
+   "executive": "Leslie Moonves",
+   "eventDate": "2018-12-17",
+   "title": "Board finding leads to withheld severance and trust reversion",
+   "summary": "CBS's board said its investigation established grounds to terminate Moonves for cause, including policy and contract violations and failure to cooperate fully. A later issuer filing reported resolution of the severance dispute in May 2021 and said the entire $120 million grantor trust would revert to the company.",
+   "status": "Resolved",
+   "historical": true,
+   "resolution": "The issuer's May 14, 2021 filing says the disputes were resolved and the arbitration dismissed; the trust assets were to return in full.",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/813828/000081382821000012/form-8k05142021.htm",
+   "sourceName": "ViacomCBS Form 8-K",
+   "sourcePublishedAt": "2021-05-14",
+   "verifiedAt": "2026-11-10T03:49:24.253Z",
+   "category": "Legal & financial",
+   "financialFacts": [
+    {
+     "amount": 120000000,
+     "currency": "USD",
+     "kind": "Severance withheld",
+     "label": "Unpaid severance trust that the May 2021 filing said would revert entirely to the company; count this once, not again as a separate recovery.",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/813828/000081382821000012/form-8k05142021.htm",
+     "amountQualifier": "exact"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2018-12-17",
+     "title": "CBS board announces cause determination and no severance",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/813828/000119312518351396/d676873dex99.htm"
+    },
+    {
+     "date": "2021-05-14",
+     "title": "Issuer reports dispute resolved and full trust reversion",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/813828/000081382821000012/form-8k05142021.htm"
+    }
+   ],
+   "currentRelevance": "A resolved former-executive dispute. This is a historical issuer record, not a score for a current successor company.",
+   "listingNote": "CBS is the historical issuer symbol used for the underlying events."
+  },
+  {
+   "id": "wynn-governance-2018",
+   "ticker": "WYNN",
+   "company": "Wynn Resorts",
+   "executive": "Steve Wynn",
+   "eventDate": "2018-02-06",
+   "title": "Founder departure followed by regulatory governance fines",
+   "summary": "Wynn Resorts announced its founder's resignation in February 2018. In 2019, Nevada imposed a $20 million company fine and Massachusetts imposed a separate $35 million company fine addressing failures in the handling and disclosure of misconduct allegations. These are regulatory actions against the company, not a modeled stock-price loss.",
+   "status": "Official finding",
+   "historical": true,
+   "resolution": "The cited records document the departure and 2019 regulatory fines and conditions. They do not purport to resolve every allegation or proceeding involving the former executive.",
+   "sourceUrl": "https://massgaming.com/blog-post/mgc-issues-decision-and-order-regarding-suitability-of-wynn-resorts-and-wynn-ma-llc/",
+   "sourceName": "Massachusetts Gaming Commission and Wynn SEC filing",
+   "sourcePublishedAt": "2019-04-30",
+   "verifiedAt": "2026-11-10T03:49:24.253Z",
+   "category": "Governance",
+   "financialFacts": [
+    {
+     "amount": 20000000,
+     "currency": "USD",
+     "kind": "Company fine",
+     "label": "Nevada Gaming Commission fine imposed February 26, 2019, as disclosed in Wynn's filing.",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1174922/000117492219000021/R24.htm",
+     "amountQualifier": "exact"
+    },
+    {
+     "amount": 35000000,
+     "currency": "USD",
+     "kind": "Company fine",
+     "label": "Separate Massachusetts Gaming Commission fine imposed April 30, 2019, with license conditions.",
+     "sourceUrl": "https://massgaming.com/blog-post/mgc-issues-decision-and-order-regarding-suitability-of-wynn-resorts-and-wynn-ma-llc/",
+     "amountQualifier": "exact"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2018-02-06",
+     "title": "Founder resigns as chairman and CEO",
+     "sourceUrl": "https://www.newsroom.wynnresorts.com/en/wynnlasvegas/PRESS-RELEASES/wynn-resorts-ceo-steps-down/s/2bd26485-dbe4-4169-9699-cb5d0941a156"
+    },
+    {
+     "date": "2019-02-26",
+     "title": "Nevada imposes company fine",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1174922/000117492219000021/R24.htm"
+    },
+    {
+     "date": "2019-04-30",
+     "title": "Massachusetts imposes company fine and monitoring conditions",
+     "sourceUrl": "https://massgaming.com/blog-post/mgc-issues-decision-and-order-regarding-suitability-of-wynn-resorts-and-wynn-ma-llc/"
+    }
+   ],
+   "currentRelevance": "Historical corporate oversight consequences. Regulatory findings about company controls are distinct from individual allegations or today's executives."
+  },
+  {
+   "id": "intel-krzanich-2018",
+   "ticker": "INTC",
+   "company": "Intel",
+   "executive": "Brian Krzanich",
+   "eventDate": "2018-06-20",
+   "title": "Confirmed manager-policy violation leads to CEO resignation",
+   "summary": "Intel said an investigation by internal and external counsel confirmed a breach of its manager relationship policy. The board accepted Krzanich's resignation and installed CFO Bob Swan as interim CEO. Its filing dates the resignation to June 20, with the public announcement on June 21.",
+   "status": "Official finding",
+   "historical": true,
+   "resolution": "The official records establish the policy finding and leadership transition. They do not quantify resulting shareholder losses.",
+   "sourceUrl": "https://www.intc.com/news-events/press-releases/detail/146/intel-ceo-brian-krzanich-resigns-board-appoints-bob-swan",
+   "sourceName": "Intel official release and Form 8-K",
+   "sourcePublishedAt": "2018-06-21",
+   "verifiedAt": "2026-11-10T03:49:24.253Z",
+   "category": "Policy & conflicts",
+   "financialFacts": [],
+   "milestones": [
+    {
+     "date": "2018-06-20",
+     "title": "CEO resigns and board appoints interim successor",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/50863/000119312518199045/d598882d8k.htm"
+    },
+    {
+     "date": "2018-06-21",
+     "title": "Intel publishes investigation conclusion",
+     "sourceUrl": "https://www.intc.com/news-events/press-releases/detail/146/intel-ceo-brian-krzanich-resigns-board-appoints-bob-swan"
+    }
+   ],
+   "currentRelevance": "A former CEO's 2018 policy case; it must not be attributed to Intel's current CEO."
+  },
+  {
+   "id": "lululemon-potdevin-2018",
+   "ticker": "LULU",
+   "company": "lululemon",
+   "executive": "Laurent Potdevin",
+   "eventDate": "2018-02-02",
+   "title": "CEO resigns after company cites conduct standards",
+   "summary": "lululemon announced Potdevin's resignation and said he had fallen short of its standards of integrity and respect. It assigned expanded roles to senior leaders while searching for a successor. The release did not detail the underlying conduct, so this case record does not add relationship allegations.",
+   "status": "Official disclosure",
+   "historical": true,
+   "resolution": "The filing records a February 2 resignation and separation agreement; the announcement followed on February 5.",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1397187/000139718718000005/lulu-20180202xex991.htm",
+   "sourceName": "lululemon official release filed with the SEC",
+   "sourcePublishedAt": "2018-02-05",
+   "verifiedAt": "2026-11-10T03:49:24.253Z",
+   "category": "Leadership",
+   "financialFacts": [],
+   "milestones": [
+    {
+     "date": "2018-02-02",
+     "title": "CEO resigns and separation agreement is executed",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1397187/000139718718000005/lulu-20180202x8k.htm"
+    },
+    {
+     "date": "2018-02-05",
+     "title": "Company announces conduct-related transition",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1397187/000139718718000005/lulu-20180202xex991.htm"
+    }
+   ],
+   "currentRelevance": "A historical company-attributed conduct disclosure; no unreported personal details or current management exposure are inferred."
+  },
+  {
+   "id": "bestbuy-dunn-2012",
+   "ticker": "BBY",
+   "company": "Best Buy",
+   "executive": "Brian Dunn",
+   "eventDate": "2012-05-14",
+   "title": "Independent inquiry identifies CEO and board oversight failures",
+   "summary": "Best Buy published an independent inquiry's findings that Dunn's close employee relationship breached policy and harmed the workplace. It also reported a failure by the chairman to escalate the issue. The inquiry found no misuse of company resources or aircraft, an important limit on the documented findings.",
+   "status": "Official finding",
+   "historical": true,
+   "resolution": "The company published the investigation findings, a separation arrangement and a board leadership change. No wider legal outcome is represented here.",
+   "sourceUrl": "https://investors.bestbuy.com/News--Events/news/news-details/2012/Best-Buy-Releases-Results-of-Independent-Investigation-New-Chairman-of-the-Board-Elected-05-14-2012/default.aspx",
+   "sourceName": "Best Buy board announcement",
+   "sourcePublishedAt": "2012-05-14",
+   "verifiedAt": "2026-11-10T03:49:24.253Z",
+   "category": "Governance",
+   "financialFacts": [],
+   "milestones": [
+    {
+     "date": "2012-05-14",
+     "title": "Board publishes independent investigation and oversight findings",
+     "sourceUrl": "https://investors.bestbuy.com/News--Events/news/news-details/2012/Best-Buy-Releases-Results-of-Independent-Investigation-New-Chairman-of-the-Board-Elected-05-14-2012/default.aspx"
+    }
+   ],
+   "currentRelevance": "A 2012 oversight case involving former leaders. Findings expressly excluded resource and aircraft misuse."
+  },
+  {
+   "id": "hp-hurd-2010",
+   "ticker": "HPQ",
+   "company": "Hewlett-Packard",
+   "executive": "Mark Hurd",
+   "eventDate": "2010-08-06",
+   "title": "Business-conduct finding prompts CEO resignation",
+   "summary": "HP announced Hurd's resignation after a board-overseen investigation found violations of its business-conduct standards. The same announcement said the inquiry did not find a violation of HP's sexual-harassment policy. The board installed an interim CEO and began a search.",
+   "status": "Official finding",
+   "historical": true,
+   "resolution": "The announcement establishes the conduct-policy finding and resignation, while expressly distinguishing it from the harassment-policy allegation.",
+   "sourceUrl": "https://investor.hp.com/news-events/news/news-details/2010/HP-CEO-Mark-Hurd-Resigns-CFO-Cathie-Lesjak-Appointed-Interim-CEO-HP--Announces-Preliminary-Results-and-Raises-Full-year-Outlook/default.aspx",
+   "sourceName": "HP official investor-relations release",
+   "sourcePublishedAt": "2010-08-06",
+   "verifiedAt": "2026-11-10T03:49:24.253Z",
+   "category": "Leadership",
+   "financialFacts": [],
+   "milestones": [
+    {
+     "date": "2010-08-06",
+     "title": "HP announces resignation and the limits of investigation findings",
+     "sourceUrl": "https://investor.hp.com/news-events/news/news-details/2010/HP-CEO-Mark-Hurd-Resigns-CFO-Cathie-Lesjak-Appointed-Interim-CEO-HP--Announces-Preliminary-Results-and-Raises-Full-year-Outlook/default.aspx"
+    }
+   ],
+   "currentRelevance": "A historical Hewlett-Packard case. Do not recast it as a company finding of sexual harassment or a score for today's HP leadership."
+  }
+ ]
+}

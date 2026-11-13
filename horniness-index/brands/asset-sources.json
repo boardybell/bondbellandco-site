@@ -1,0 +1,78 @@
+{
+  "purpose": "Brand identification in source-backed corporate research; no sponsorship or endorsement implied. Marks are current identity assets, not historical event photographs.",
+  "licenseSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/LICENSE.md",
+  "assets": [
+    {
+      "asset": "/brands/wwe.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/wwe.svg",
+      "collection": "Simple Icons",
+      "license": "CC0-1.0",
+      "sha256": "ee5ee0dd8446da0b412c5726a615aa9ef6c4796414ed78a02c9892b22430683c",
+      "retrievedAt": "2026-11-10"
+    },
+    {
+      "asset": "/brands/mcdonalds.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/mcdonalds.svg",
+      "collection": "Simple Icons",
+      "license": "CC0-1.0",
+      "sha256": "35c203615d2d5d61184ea1f4ded91ebbf329a59e7e2d52e0a640f3b8fd8b740a",
+      "retrievedAt": "2026-11-10"
+    },
+    {
+      "asset": "/brands/cbs.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/cbs.svg",
+      "collection": "Simple Icons",
+      "license": "CC0-1.0",
+      "sha256": "f75e2ee08226d1053235a3ea06109172c4973a97275be3eb065a1b3e87fc2e44",
+      "retrievedAt": "2026-11-10"
+    },
+    {
+      "asset": "/brands/intel.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/intel.svg",
+      "collection": "Simple Icons",
+      "license": "CC0-1.0",
+      "sha256": "25d0d4387af0999eb5dc79b165ecfd7b972ff43047406da533f3207ac92c0a57",
+      "retrievedAt": "2026-11-10"
+    },
+    {
+      "asset": "/brands/hp.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/hp.svg",
+      "collection": "Simple Icons",
+      "license": "CC0-1.0",
+      "sha256": "29c08a63cdea89850876a3840d93096b4125151dbba17a27926a08f9f3b0f788",
+      "retrievedAt": "2026-11-10"
+    },
+    {
+      "asset": "/brands/apple.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/apple.svg",
+      "collection": "Simple Icons",
+      "license": "CC0-1.0",
+      "sha256": "2a1509dccd25e6d2bc7a11a8e52941077e1a48555e192ce638699b9f083c2a7c",
+      "retrievedAt": "2026-11-10"
+    },
+    {
+      "asset": "/brands/nvidia.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nvidia.svg",
+      "collection": "Simple Icons",
+      "license": "CC0-1.0",
+      "sha256": "b0e4cfc12712c840d4d630c9a717200fbd09aeeadbd3faeac13bda2e2ed050b0",
+      "retrievedAt": "2026-11-10"
+    },
+    {
+      "asset": "/brands/starbucks.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/starbucks.svg",
+      "collection": "Simple Icons",
+      "license": "CC0-1.0",
+      "sha256": "b12ac9042b77a04d88f28e5be655719dd1e321b0b700ea5a280df4e1ca8c23c8",
+      "retrievedAt": "2026-11-10"
+    },
+    {
+      "asset": "/brands/google.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/google.svg",
+      "collection": "Simple Icons",
+      "license": "CC0-1.0",
+      "sha256": "d8cf9fb2d5e234e03254f1d6400d8cc8160c309b010d031a64f37084b5a21d01",
+      "retrievedAt": "2026-11-10"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+/* Small additions for the static mirror (things the React app did with components or inline styles). */
+.hi-skip{position:absolute;left:-9999px;top:8px;z-index:100;background:#d6b779;color:#0a121c;padding:8px 12px;border-radius:6px}
+.hi-skip:focus{left:8px}
+.sidebar nav>a.hi-live-nav{display:flex;align-items:center;gap:12px;padding:11px 13px;border-radius:6px;color:#9aa7b2;font-size:12px}
+.sidebar nav>a.hi-live-nav:hover{background:#162331;color:#e7e8e2}
+.sidebar nav>a.hi-live-nav small{margin-left:auto;font-size:11px;color:#6f8190}
+.sidebar-note a{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-size:10px;margin-top:10px}
+a.account.hi-home:hover strong{color:var(--gold)}
+.hi-floating-tip{position:absolute;z-index:80;pointer-events:none}
+.hi-floating-tip p{margin-top:4px}
+.hi-cross{stroke:#566572;stroke-width:1;opacity:0}
+.hi-hit:hover .hi-cross,.hi-hit:focus .hi-cross{opacity:1}
+.hi-hit:focus{outline:none}.hi-hit:focus-visible rect{stroke:#d6b779}
+.public-year-chart svg,.valuation-chart svg{display:block;overflow:visible}
+.hi-fineprint{margin:34px 0 0;padding:20px 0 0;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.7;max-width:980px}
+.hi-fineprint p+p{margin-top:8px}
+.valuation-attribution span+span:before{content:"· ";}
+.mobile-scrim[hidden]{display:none!important}

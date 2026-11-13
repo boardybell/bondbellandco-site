@@ -307,3 +307,6 @@ button.cta:focus-visible{outline:2px solid var(--navy);outline-offset:3px;border
 @media (max-width:400px){
   .thesis{font-size:29px}
 }
+
+/* ── Easter eggs (eggs.js): larger tap area, no visual change ── */
+.egg{padding:10px 6px;margin:0 -6px;-webkit-tap-highlight-color:transparent}
