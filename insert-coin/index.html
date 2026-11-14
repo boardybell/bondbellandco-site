@@ -13,14 +13,13 @@
 <style>
   /* Option 2 · Night Arcade: a 1980s cabinet coin door, neon and CRT glow. */
   :root{--bg:#05030C;--pink:#FF3EA5;--cyan:#38E8FF;--amber:#FFB238;--text:#F2ECFF;--muted:#9C90C0}
-  body{background:var(--bg);color:var(--text);font-family:ui-monospace,'SF Mono',Menlo,monospace}
+  html{background:var(--bg)}
+  body{background:transparent;color:var(--text);font-family:ui-monospace,'SF Mono',Menlo,monospace}
   body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:40;
     background:repeating-linear-gradient(0deg,rgba(0,0,0,.28) 0 1px,transparent 1px 3px),radial-gradient(120% 90% at 50% 50%,transparent 60%,rgba(0,0,0,.7))}
-  body::after{content:"";position:fixed;left:-10%;right:-10%;bottom:0;height:42vh;z-index:0;pointer-events:none;
-    background:linear-gradient(transparent 0,rgba(255,62,165,.25) 100%),repeating-linear-gradient(90deg,rgba(56,232,255,.35) 0 1px,transparent 1px 60px),
-    repeating-linear-gradient(0deg,rgba(56,232,255,.35) 0 1px,transparent 1px 34px);transform:perspective(300px) rotateX(55deg);transform-origin:bottom}
+  body::after{content:"";position:fixed;left:0;right:0;bottom:0;height:30vh;z-index:-1;pointer-events:none;opacity:.6;background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDQwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRkYzRUE1IiBzdG9wLW9wYWNpdHk9IjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGRjNFQTUiIHN0b3Atb3BhY2l0eT0iLjI0Ii8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImYiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPjxzdG9wIG9mZnNldD0iLjI1IiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz48L2xpbmVhckdyYWRpZW50PjxtYXNrIGlkPSJtIj48cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9InVybCgjZikiLz48L21hc2s+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0idXJsKCNnKSIvPjxwYXRoIG1hc2s9InVybCgjbSkiIGQ9Ik0tODc4LjggMEwtMzAwMCA0MDBNLTg0My4zIDBMLTI5MTAgNDAwTS04MDcuOSAwTC0yODIwIDQwME0tNzcyLjQgMEwtMjczMCA0MDBNLTczNy4wIDBMLTI2NDAgNDAwTS03MDEuNSAwTC0yNTUwIDQwME0tNjY2LjEgMEwtMjQ2MCA0MDBNLTYzMC42IDBMLTIzNzAgNDAwTS01OTUuMiAwTC0yMjgwIDQwME0tNTU5LjcgMEwtMjE5MCA0MDBNLTUyNC4yIDBMLTIxMDAgNDAwTS00ODguOCAwTC0yMDEwIDQwME0tNDUzLjMgMEwtMTkyMCA0MDBNLTQxNy45IDBMLTE4MzAgNDAwTS0zODIuNCAwTC0xNzQwIDQwME0tMzQ3LjAgMEwtMTY1MCA0MDBNLTMxMS41IDBMLTE1NjAgNDAwTS0yNzYuMSAwTC0xNDcwIDQwME0tMjQwLjYgMEwtMTM4MCA0MDBNLTIwNS4yIDBMLTEyOTAgNDAwTS0xNjkuNyAwTC0xMjAwIDQwME0tMTM0LjIgMEwtMTExMCA0MDBNLTk4LjggMEwtMTAyMCA0MDBNLTYzLjMgMEwtOTMwIDQwME0tMjcuOSAwTC04NDAgNDAwTTcuNiAwTC03NTAgNDAwTTQzLjAgMEwtNjYwIDQwME03OC41IDBMLTU3MCA0MDBNMTEzLjkgMEwtNDgwIDQwME0xNDkuNCAwTC0zOTAgNDAwTTE4NC44IDBMLTMwMCA0MDBNMjIwLjMgMEwtMjEwIDQwME0yNTUuOCAwTC0xMjAgNDAwTTI5MS4yIDBMLTMwIDQwME0zMjYuNyAwTDYwIDQwME0zNjIuMSAwTDE1MCA0MDBNMzk3LjYgMEwyNDAgNDAwTTQzMy4wIDBMMzMwIDQwME00NjguNSAwTDQyMCA0MDBNNTAzLjkgMEw1MTAgNDAwTTUzOS40IDBMNjAwIDQwME01NzQuOCAwTDY5MCA0MDBNNjEwLjMgMEw3ODAgNDAwTTY0NS44IDBMODcwIDQwME02ODEuMiAwTDk2MCA0MDBNNzE2LjcgMEwxMDUwIDQwME03NTIuMSAwTDExNDAgNDAwTTc4Ny42IDBMMTIzMCA0MDBNODIzLjAgMEwxMzIwIDQwME04NTguNSAwTDE0MTAgNDAwTTg5My45IDBMMTUwMCA0MDBNOTI5LjQgMEwxNTkwIDQwME05NjQuOCAwTDE2ODAgNDAwTTEwMDAuMyAwTDE3NzAgNDAwTTEwMzUuOCAwTDE4NjAgNDAwTTEwNzEuMiAwTDE5NTAgNDAwTTExMDYuNyAwTDIwNDAgNDAwTTExNDIuMSAwTDIxMzAgNDAwTTExNzcuNiAwTDIyMjAgNDAwTTEyMTMuMCAwTDIzMTAgNDAwTTEyNDguNSAwTDI0MDAgNDAwTTEyODMuOSAwTDI0OTAgNDAwTTEzMTkuNCAwTDI1ODAgNDAwTTEzNTQuOCAwTDI2NzAgNDAwTTEzOTAuMyAwTDI3NjAgNDAwTTE0MjUuOCAwTDI4NTAgNDAwTTE0NjEuMiAwTDI5NDAgNDAwTTE0OTYuNyAwTDMwMzAgNDAwTTE1MzIuMSAwTDMxMjAgNDAwTTE1NjcuNiAwTDMyMTAgNDAwTTE2MDMuMCAwTDMzMDAgNDAwTTE2MzguNSAwTDMzOTAgNDAwTTE2NzMuOSAwTDM0ODAgNDAwTTE3MDkuNCAwTDM1NzAgNDAwTTE3NDQuOCAwTDM2NjAgNDAwTTE3ODAuMyAwTDM3NTAgNDAwTTE4MTUuOCAwTDM4NDAgNDAwTTE4NTEuMiAwTDM5MzAgNDAwTTAgMC4wSDEwMDBNMCAyLjdIMTAwME0wIDkuOUgxMDAwTTAgMjEuNEgxMDAwTTAgMzcuMEgxMDAwTTAgNTYuNkgxMDAwTTAgODAuMEgxMDAwTTAgMTA3LjJIMTAwME0wIDEzOC4xSDEwMDBNMCAxNzIuOEgxMDAwTTAgMjExLjFIMTAwME0wIDI1My4wSDEwMDBNMCAyOTguNEgxMDAwTTAgMzQ3LjVIMTAwME0wIDQwMC4wSDEwMDAiIHN0cm9rZT0iIzM4RThGRiIgc3Ryb2tlLW9wYWNpdHk9Ii4zOCIgc3Ryb2tlLXdpZHRoPSIxIiB2ZWN0b3ItZWZmZWN0PSJub24tc2NhbGluZy1zdHJva2UiIGZpbGw9Im5vbmUiLz48L3N2Zz4=") center/100% 100% no-repeat}
   .sound{color:var(--muted);font-family:inherit}
-  .wrap{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:28px 16px}
+  .wrap{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:28px 16px}
   .brand img{filter:drop-shadow(0 0 6px rgba(56,232,255,.8)) drop-shadow(0 0 18px rgba(56,232,255,.4))}
   h1{margin:0;font:700 clamp(30px,8vw,56px)/1 ui-monospace,'SF Mono',Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;color:#fff;
     text-shadow:0 0 4px #fff,0 0 12px var(--pink),0 0 28px var(--pink),0 0 48px var(--pink);animation:flick 4s infinite}
@@ -41,29 +40,15 @@
   .door.hot .mech:not(.off) .price{background:#fff}
   .score{font-size:14px;letter-spacing:.24em;color:var(--muted)}
   .score b{color:var(--amber);text-shadow:0 0 10px var(--amber);font-size:22px;display:inline-block;margin-left:8px}
-  .tray{position:relative;z-index:41;display:flex;gap:18px;min-height:110px;align-items:center}
-  /* arcade token: reeded gold edge, sunken field, raised lettering, a moving sheen and a neon rim */
-  .coin{width:96px;height:96px;border-radius:50%;padding:5px;
-    background:repeating-conic-gradient(#8A5E00 0 4deg,#FFD24A 4deg 8deg);
-    box-shadow:0 0 0 2px #5A3E00,0 0 18px rgba(255,210,74,.45),0 10px 18px rgba(0,0,0,.6);animation:bob 3s ease-in-out infinite}
+  .tray{position:relative;z-index:41;display:flex;gap:18px;min-height:118px;align-items:center}
+  /* silver dollar (coin #7 of the 20 options): struck relief portrait, reeded edge, rim legend. SVG inline. */
+  .coin{width:104px;height:104px;border-radius:50%;background:none;filter:drop-shadow(0 10px 12px rgba(0,0,0,.7)) drop-shadow(0 0 10px rgba(220,230,255,.25));
+    animation:bob 3s ease-in-out infinite}
+  .coin svg{display:block;width:100%;height:100%;pointer-events:none}
   .coin:nth-child(2){animation-delay:-1s}.coin:nth-child(3){animation-delay:-2s}
   @keyframes bob{50%{transform:translateY(-5px)}}
-  .coin .face{position:relative;display:grid;place-items:center;width:100%;height:100%;border-radius:50%;overflow:hidden;
-    background:radial-gradient(circle at 35% 28%,#FFF8D6 0,#FFD84E 26%,#E9A91A 62%,#9A6A06 100%);
-    box-shadow:inset 0 0 0 2px #B07A08,inset 0 0 0 5px rgba(255,240,180,.55),inset 0 0 0 7px #C98E10,inset 0 -6px 12px rgba(90,62,0,.45)}
-  .coin .face::before{content:"";position:absolute;inset:10px;border-radius:50%;border:1px dotted rgba(90,62,0,.55)}
-  .coin .face::after{content:"";position:absolute;inset:-40%;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.75) 50%,transparent 60%);
-    transform:translateX(-100%);animation:sheen 3.6s ease-in-out infinite}
-  .coin:nth-child(2) .face::after{animation-delay:1.2s}.coin:nth-child(3) .face::after{animation-delay:2.4s}
-  @keyframes sheen{0%,55%{transform:translateX(-100%)}80%,100%{transform:translateX(100%)}}
-  /* the portrait is struck into the gold: multiply turns the paper gold and the ink a deep bronze */
-  .coin img{position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);border-radius:50%;object-fit:cover;
-    mix-blend-mode:multiply;filter:sepia(1) saturate(2) hue-rotate(-8deg) contrast(1.25);object-position:50% 30%;pointer-events:none}
-  .coin b{position:absolute;z-index:1;bottom:3px;left:50%;transform:translateX(-50%);padding:2px 6px 1px;border-radius:3px;
-    font:900 10px/1 ui-monospace,'SF Mono',Menlo,monospace;letter-spacing:.12em;color:#FFE9A8;background:#6A4300;
-    box-shadow:0 0 0 1px #FFD24A,0 1px 2px rgba(0,0,0,.5)}
-  .coin:hover{animation-play-state:paused;box-shadow:0 0 0 2px #5A3E00,0 0 0 4px var(--cyan),0 0 26px var(--cyan),0 10px 18px rgba(0,0,0,.6)}
-  .coin.dragging{animation:spin .9s linear infinite;box-shadow:0 0 0 2px #5A3E00,0 0 0 4px var(--pink),0 0 30px var(--pink)}
+  .coin:hover{animation-play-state:paused;filter:drop-shadow(0 10px 12px rgba(0,0,0,.7)) drop-shadow(0 0 12px var(--cyan))}
+  .coin.dragging{animation:spin .9s linear infinite;filter:drop-shadow(0 0 16px var(--pink))}
   @keyframes spin{to{transform:rotateY(360deg)}}
   .start{border:2px solid var(--pink);border-radius:4px;padding:14px 30px;font:700 15px/1 inherit;font-family:inherit;letter-spacing:.3em;text-transform:uppercase;color:#fff;background:transparent;
     text-shadow:0 0 8px var(--pink);box-shadow:0 0 14px var(--pink),inset 0 0 14px rgba(255,62,165,.5)}
@@ -81,7 +66,55 @@
     <div class="mech off" aria-hidden="true"><div class="price">25¢</div><div class="slot"></div><div class="ret"></div></div>
   </div>
   <div class="score">CREDIT<b id="credit" data-pad="2">00</b></div>
-  <div class="tray"><button class="coin" type="button" aria-label="Insert coin"><span class="face"><img src="face.jpg?v=2" alt="" width="240" height="240" draggable="false"><b>BBC</b></span></button><button class="coin" type="button" aria-label="Insert coin"><span class="face"><img src="face.jpg?v=2" alt="" width="240" height="240" draggable="false"><b>BBC</b></span></button><button class="coin" type="button" aria-label="Insert coin"><span class="face"><img src="face.jpg?v=2" alt="" width="240" height="240" draggable="false"><b>BBC</b></span></button></div>
+  <div class="tray"><button class="coin" type="button" aria-label="Insert coin"><svg aria-hidden="true" focusable="false" viewBox="0 0 200 200"  role="img" aria-label="Real · silver dollar"><defs>
+    <radialGradient id="g71" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".3" stop-color="#DCE1E8"/><stop offset=".72" stop-color="#A2AAB8"/><stop offset="1" stop-color="#545C6B"/></radialGradient>
+    <linearGradient id="e71" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#A2AAB8"/><stop offset="1" stop-color="#545C6B"/></linearGradient>
+    <clipPath id="c71"><circle cx="100" cy="100" r="54"/></clipPath>
+    <filter id="ink71" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.32941176470588235 0 0 0 0 0.3607843137254902 0 0 0 0 0.4196078431372549 -.55 -.55 -.55 0 1.45"/></filter>
+    <filter id="rel71" color-interpolation-filters="sRGB" x="0" y="0" width="1" height="1">
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -.6 -.6 -.6 0 1.5" result="a"/>
+      <feGaussianBlur in="a" stdDeviation="0.9" result="b"/>
+      <feDiffuseLighting in="b" surfaceScale="4.5" diffuseConstant="1" lighting-color="#fff" result="l"><feDistantLight azimuth="225" elevation="42"/></feDiffuseLighting>
+    </filter>
+    <filter id="frost71" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 .93 0 0 0 0 .95 0 0 0 0 .98 .5 .5 .5 0 -.25"/><feGaussianBlur stdDeviation=".35"/></filter>
+    <filter id="neon71"><feColorMatrix type="matrix" values="0 0 0 0 .22 0 0 0 0 .91 0 0 0 0 1 -.7 -.7 -.7 0 1.6" result="n"/><feGaussianBlur in="n" stdDeviation="1.4" result="nb"/><feMerge><feMergeNode in="nb"/><feMergeNode in="n"/></feMerge></filter>
+    <filter id="wear71"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="71"/><feColorMatrix values="0 0 0 0 .2 0 0 0 0 .18 0 0 0 0 .12 0 0 0 -1.3 .9"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+    <path id="t71" d="M 24,100 a 76,76 0 1,1 152,0"/>
+    <path id="b71" d="M 18,100 a 82,82 0 0,0 164,0"/>
+    <path id="l71" d="M 100,172 a 72,72 0 0,1 0,-144"/>
+  </defs><circle cx="100" cy="100" r="96" fill="url(#e71)"/><circle cx="100" cy="100" r="93" fill="none" stroke="#545C6B" stroke-width="6" stroke-dasharray="1.6 1.6" opacity=".75"/><circle cx="100" cy="100" r="88" fill="url(#g71)"/><image href="face.jpg?v=2" x="46" y="46" width="108" height="108" clip-path="url(#c71)" preserveAspectRatio="xMidYMid slice" filter="url(#rel71)" style="mix-blend-mode:overlay"/><image href="face.jpg?v=2" x="46" y="46" width="108" height="108" clip-path="url(#c71)" preserveAspectRatio="xMidYMid slice" filter="url(#ink71)" opacity=".35"/><text font-size="12" font-family="Georgia,'Times New Roman',serif" font-weight="700" fill="#545C6B" letter-spacing="1.4545454545454546"><textPath href="#t71" startOffset="50%" text-anchor="middle">★ E PLURIBUS BOARDUM ★</textPath></text><text font-size="11" font-family="Georgia,'Times New Roman',serif" font-weight="700" fill="#545C6B" letter-spacing="4"><textPath href="#b71" startOffset="50%" text-anchor="middle">ONE DOLLAR · 2026</textPath></text><circle cx="100" cy="100" r="95" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1.5" stroke-dasharray="120 500" transform="rotate(195 100 100)"/></svg></button><button class="coin" type="button" aria-label="Insert coin"><svg aria-hidden="true" focusable="false" viewBox="0 0 200 200"  role="img" aria-label="Real · silver dollar"><defs>
+    <radialGradient id="g72" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".3" stop-color="#DCE1E8"/><stop offset=".72" stop-color="#A2AAB8"/><stop offset="1" stop-color="#545C6B"/></radialGradient>
+    <linearGradient id="e72" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#A2AAB8"/><stop offset="1" stop-color="#545C6B"/></linearGradient>
+    <clipPath id="c72"><circle cx="100" cy="100" r="54"/></clipPath>
+    <filter id="ink72" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.32941176470588235 0 0 0 0 0.3607843137254902 0 0 0 0 0.4196078431372549 -.55 -.55 -.55 0 1.45"/></filter>
+    <filter id="rel72" color-interpolation-filters="sRGB" x="0" y="0" width="1" height="1">
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -.6 -.6 -.6 0 1.5" result="a"/>
+      <feGaussianBlur in="a" stdDeviation="0.9" result="b"/>
+      <feDiffuseLighting in="b" surfaceScale="4.5" diffuseConstant="1" lighting-color="#fff" result="l"><feDistantLight azimuth="225" elevation="42"/></feDiffuseLighting>
+    </filter>
+    <filter id="frost72" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 .93 0 0 0 0 .95 0 0 0 0 .98 .5 .5 .5 0 -.25"/><feGaussianBlur stdDeviation=".35"/></filter>
+    <filter id="neon72"><feColorMatrix type="matrix" values="0 0 0 0 .22 0 0 0 0 .91 0 0 0 0 1 -.7 -.7 -.7 0 1.6" result="n"/><feGaussianBlur in="n" stdDeviation="1.4" result="nb"/><feMerge><feMergeNode in="nb"/><feMergeNode in="n"/></feMerge></filter>
+    <filter id="wear72"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="72"/><feColorMatrix values="0 0 0 0 .2 0 0 0 0 .18 0 0 0 0 .12 0 0 0 -1.3 .9"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+    <path id="t72" d="M 24,100 a 76,76 0 1,1 152,0"/>
+    <path id="b72" d="M 18,100 a 82,82 0 0,0 164,0"/>
+    <path id="l72" d="M 100,172 a 72,72 0 0,1 0,-144"/>
+  </defs><circle cx="100" cy="100" r="96" fill="url(#e72)"/><circle cx="100" cy="100" r="93" fill="none" stroke="#545C6B" stroke-width="6" stroke-dasharray="1.6 1.6" opacity=".75"/><circle cx="100" cy="100" r="88" fill="url(#g72)"/><image href="face.jpg?v=2" x="46" y="46" width="108" height="108" clip-path="url(#c72)" preserveAspectRatio="xMidYMid slice" filter="url(#rel72)" style="mix-blend-mode:overlay"/><image href="face.jpg?v=2" x="46" y="46" width="108" height="108" clip-path="url(#c72)" preserveAspectRatio="xMidYMid slice" filter="url(#ink72)" opacity=".35"/><text font-size="12" font-family="Georgia,'Times New Roman',serif" font-weight="700" fill="#545C6B" letter-spacing="1.4545454545454546"><textPath href="#t72" startOffset="50%" text-anchor="middle">★ E PLURIBUS BOARDUM ★</textPath></text><text font-size="11" font-family="Georgia,'Times New Roman',serif" font-weight="700" fill="#545C6B" letter-spacing="4"><textPath href="#b72" startOffset="50%" text-anchor="middle">ONE DOLLAR · 2026</textPath></text><circle cx="100" cy="100" r="95" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1.5" stroke-dasharray="120 500" transform="rotate(195 100 100)"/></svg></button><button class="coin" type="button" aria-label="Insert coin"><svg aria-hidden="true" focusable="false" viewBox="0 0 200 200"  role="img" aria-label="Real · silver dollar"><defs>
+    <radialGradient id="g73" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".3" stop-color="#DCE1E8"/><stop offset=".72" stop-color="#A2AAB8"/><stop offset="1" stop-color="#545C6B"/></radialGradient>
+    <linearGradient id="e73" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#A2AAB8"/><stop offset="1" stop-color="#545C6B"/></linearGradient>
+    <clipPath id="c73"><circle cx="100" cy="100" r="54"/></clipPath>
+    <filter id="ink73" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.32941176470588235 0 0 0 0 0.3607843137254902 0 0 0 0 0.4196078431372549 -.55 -.55 -.55 0 1.45"/></filter>
+    <filter id="rel73" color-interpolation-filters="sRGB" x="0" y="0" width="1" height="1">
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -.6 -.6 -.6 0 1.5" result="a"/>
+      <feGaussianBlur in="a" stdDeviation="0.9" result="b"/>
+      <feDiffuseLighting in="b" surfaceScale="4.5" diffuseConstant="1" lighting-color="#fff" result="l"><feDistantLight azimuth="225" elevation="42"/></feDiffuseLighting>
+    </filter>
+    <filter id="frost73" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 .93 0 0 0 0 .95 0 0 0 0 .98 .5 .5 .5 0 -.25"/><feGaussianBlur stdDeviation=".35"/></filter>
+    <filter id="neon73"><feColorMatrix type="matrix" values="0 0 0 0 .22 0 0 0 0 .91 0 0 0 0 1 -.7 -.7 -.7 0 1.6" result="n"/><feGaussianBlur in="n" stdDeviation="1.4" result="nb"/><feMerge><feMergeNode in="nb"/><feMergeNode in="n"/></feMerge></filter>
+    <filter id="wear73"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="73"/><feColorMatrix values="0 0 0 0 .2 0 0 0 0 .18 0 0 0 0 .12 0 0 0 -1.3 .9"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+    <path id="t73" d="M 24,100 a 76,76 0 1,1 152,0"/>
+    <path id="b73" d="M 18,100 a 82,82 0 0,0 164,0"/>
+    <path id="l73" d="M 100,172 a 72,72 0 0,1 0,-144"/>
+  </defs><circle cx="100" cy="100" r="96" fill="url(#e73)"/><circle cx="100" cy="100" r="93" fill="none" stroke="#545C6B" stroke-width="6" stroke-dasharray="1.6 1.6" opacity=".75"/><circle cx="100" cy="100" r="88" fill="url(#g73)"/><image href="face.jpg?v=2" x="46" y="46" width="108" height="108" clip-path="url(#c73)" preserveAspectRatio="xMidYMid slice" filter="url(#rel73)" style="mix-blend-mode:overlay"/><image href="face.jpg?v=2" x="46" y="46" width="108" height="108" clip-path="url(#c73)" preserveAspectRatio="xMidYMid slice" filter="url(#ink73)" opacity=".35"/><text font-size="12" font-family="Georgia,'Times New Roman',serif" font-weight="700" fill="#545C6B" letter-spacing="1.4545454545454546"><textPath href="#t73" startOffset="50%" text-anchor="middle">★ E PLURIBUS BOARDUM ★</textPath></text><text font-size="11" font-family="Georgia,'Times New Roman',serif" font-weight="700" fill="#545C6B" letter-spacing="4"><textPath href="#b73" startOffset="50%" text-anchor="middle">ONE DOLLAR · 2026</textPath></text><circle cx="100" cy="100" r="95" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1.5" stroke-dasharray="120 500" transform="rotate(195 100 100)"/></svg></button></div>
   <button class="start" id="start" type="button">1P Start</button>
   <p class="sr" id="live" aria-live="polite"></p>
 </main>
