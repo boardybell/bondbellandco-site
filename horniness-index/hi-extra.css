@@ -41,3 +41,8 @@ a.account.hi-home:hover strong{color:var(--gold)}
 /* validated series colours (company / S&P 500) */
 .valuation-chart-legend i{background:#b7892a}
 .valuation-chart-legend span:nth-child(2) i{background:#4a8fd6}
+
+/* Bond Bell & Co logo in the sidebar's home link */
+.hi-home-logo{display:flex;flex-direction:column;gap:6px;min-width:0}
+.hi-home-logo img{display:block;width:100%;max-width:168px;height:auto}
+.hi-home-logo small{color:var(--muted)}

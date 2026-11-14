@@ -16,8 +16,11 @@
   body { background:radial-gradient(120% 90% at 50% 0%, #1C2C4A 0%, var(--deep) 70%); color:var(--cream);
     font-family:'IBM Plex Sans', system-ui, sans-serif; overflow:hidden; touch-action:none; -webkit-user-select:none; user-select:none; }
   .wrap { min-height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px; padding:24px 16px calc(24px + env(safe-area-inset-bottom)); }
-  .back { position:fixed; top:16px; left:16px; color:var(--muted); font-size:12px; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; padding:8px; }
-  .back:hover, .back:focus-visible { color:var(--cream); }
+  .brand { display:block; padding:6px; margin-bottom:4px; }
+  .brand img { display:block; height:52px; width:auto; max-width:78vw; object-fit:contain; }
+  .brand:focus-visible { outline:2px solid var(--cream); outline-offset:2px; }
+  @media (max-width:480px) { .brand img { height:auto; width:min(250px, 70vw); } }
+  @media (max-height:620px) { .brand img { height:34px; width:auto; } }
   .sound { position:fixed; top:16px; right:16px; background:none; border:0; color:var(--muted); font:inherit; font-size:12px; letter-spacing:.14em; text-transform:uppercase; padding:8px; cursor:pointer; }
   .sound:hover, .sound:focus-visible { color:var(--cream); }
 
@@ -79,9 +82,9 @@
 </style>
 </head>
 <body>
-<a class="back" href="../">← Bond Bell &amp; Co</a>
 <button class="sound" type="button" aria-pressed="true">Sound on</button>
 <main class="wrap">
+  <a class="brand" href="../" aria-label="Bond Bell &amp; Co home"><img src="../images/logo-cream.png" alt="Bond Bell &amp; Co. Private Wealth Advisors" width="1335" height="250"></a>
   <h1>Insert coin<span>_</span></h1>
   <p class="hint" id="hint">Drag a coin into the slot, or tap one.</p>
   <div class="door" id="door">
