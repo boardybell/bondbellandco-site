@@ -52,7 +52,18 @@
   @keyframes spin{to{transform:rotateY(360deg)}}
   .start{border:2px solid var(--pink);border-radius:4px;padding:14px 30px;font:700 15px/1 inherit;font-family:inherit;letter-spacing:.3em;text-transform:uppercase;color:#fff;background:transparent;
     text-shadow:0 0 8px var(--pink);box-shadow:0 0 14px var(--pink),inset 0 0 14px rgba(255,62,165,.5)}
-  .start.ready{animation:blink 1.1s steps(2,start) infinite}
+  .start.ready{animation:dim 1.1s steps(2,start) infinite}
+  @keyframes dim{to{opacity:.35}}
+  /* jackpot easter egg (middle coin first) */
+  .spill{position:fixed;z-index:55;pointer-events:none;filter:drop-shadow(0 4px 6px rgba(0,0,0,.6))}
+  .spill svg{display:block;width:100%;height:100%}
+  body.jackpot h1{color:#FFE9A8;text-shadow:0 0 4px #fff,0 0 14px var(--amber),0 0 32px var(--amber),0 0 60px #FF7A00;animation:jackflash .35s steps(2,start) 6,flick 4s 2.2s infinite}
+  @keyframes jackflash{to{color:var(--pink)}}
+  body.jackpot .door{animation:rattle .09s linear 14;box-shadow:0 0 0 1px #000,0 20px 60px rgba(0,0,0,.8),0 0 60px rgba(255,178,56,.55)}
+  @keyframes rattle{25%{transform:translate(-3px,1px) rotate(-.6deg)}75%{transform:translate(3px,-1px) rotate(.6deg)}}
+  body.jackpot .mech .price{background:#fff;box-shadow:0 0 18px var(--amber),0 0 40px var(--amber)}
+  body.jackpot .hint{color:var(--amber);text-shadow:0 0 10px var(--amber)}
+  .start.vip{border-color:var(--amber);color:#2A1300;background:linear-gradient(#FFE9A8,#FFB238);text-shadow:none;box-shadow:0 0 18px var(--amber),0 0 40px rgba(255,178,56,.5)}
 </style>
 </head>
 <body>
@@ -125,7 +136,7 @@
   <p class="sr" id="live" aria-live="polite"></p>
 </main>
 <div class="fade" id="fade"></div>
-<script>window.COIN_THEME = { wave: 'square', credit: [880, 1760], start: [392, 523, 659, 784, 1047] };</script>
-<script src="coin.js?v=1"></script>
+<script>window.COIN_THEME = { jackpot: true, wave: 'square', credit: [880, 1760], start: [392, 523, 659, 784, 1047] };</script>
+<script src="coin.js?v=2"></script>
 </body>
 </html>

@@ -9,7 +9,8 @@
   var door = $('door') || document.body, plate = $('plate'), slot = $('slot'), creditEl = $('credit'), start = $('start');
   var hint = $('hint'), live = $('live'), fade = $('fade'), soundBtn = document.querySelector('.sound');
   var T = window.COIN_THEME || {};
-  var credits = 0, leaving = false, soundOn = true, ac = null;
+  var credits = 0, leaving = false, soundOn = true, ac = null, vip = false;
+  var ALL = [].slice.call(document.querySelectorAll('.coin')); // original order: the middle one is ALL[1]
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function audio() { if (!ac) { try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (_) {} } return ac; }
@@ -30,12 +31,45 @@
   function retrigger(el, cls) { if (!el) return; el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
   function addCredit(coin) {
     if (coin) { coin.classList.add('spent'); coin.hidden = true; }
+    if (credits === 0 && coin && ALL.length === 3 && coin === ALL[1] && T.jackpot) { jackpot(); return; }
     clink(); credit(); retrigger(plate, 'clunk');
     credits++; creditEl.textContent = String(credits).padStart(creditEl.dataset.pad || 1, '0');
     retrigger(creditEl, 'bump'); door.classList.add('paid'); start.classList.add('ready');
     if (hint) hint.textContent = credits === 1 ? (hint.dataset.one || 'Credit accepted. Press start.') : credits + ' credits. Press start.';
     if (live) live.textContent = 'Credit ' + credits + '. Press start.';
     if (!document.querySelector('.coin:not(.spent)')) setTimeout(function () { start.focus(); }, 300);
+  }
+  // Easter egg: the middle coin first pays out. Coins pour from the return flap, credits roll to 99,
+  // and START becomes VIP START, which opens the arcade with its VIP lounge unlocked.
+  function jackpot() {
+    vip = true; credits = 99; clink();
+    [523, 659, 784, 1047, 1319, 1568, 2093].forEach(function (f, i) { tone(f, 0.15 + i * 0.07, 0.16, 'square', 0.07); });
+    for (var k = 0; k < 26; k++) tone(2600 + Math.random() * 900, 0.7 + k * 0.045, 0.03, 'triangle', 0.05);
+    document.body.classList.add('jackpot'); door.classList.add('paid');
+    var h1 = document.querySelector('h1'); if (h1) h1.textContent = 'JACKPOT';
+    if (hint) hint.textContent = 'VIP ACCESS GRANTED'; if (live) live.textContent = 'Jackpot. 99 credits. VIP access granted. Press VIP start.';
+    var n = 0, roll = setInterval(function () { n = Math.min(99, n + 3); creditEl.textContent = String(n).padStart(2, '0'); if (n >= 99) { clearInterval(roll); retrigger(creditEl, 'bump'); } }, reduce ? 1 : 40);
+    start.textContent = 'VIP START'; start.classList.add('ready', 'vip');
+    if (!reduce) spill();
+    setTimeout(function () { start.focus(); }, 600);
+  }
+  function spill() {
+    var flap = document.querySelector('.mech .ret'); if (!flap || !document.body.animate) return;
+    var f = flap.getBoundingClientRect(), H = window.innerHeight, src = (ALL[0].querySelector('svg') || {}).outerHTML || '';
+    for (var i = 0; i < 34; i++) (function (i) {
+      setTimeout(function () {
+        var c = document.createElement('div'); c.className = 'spill'; c.innerHTML = src;
+        var size = 34 + Math.random() * 22; c.style.width = c.style.height = size + 'px';
+        c.style.left = (f.left + f.width / 2 - size / 2) + 'px'; c.style.top = (f.top + f.height / 2 - size / 2) + 'px';
+        document.body.appendChild(c);
+        var vx = (Math.random() - .5) * 520, up = 160 + Math.random() * 260, fall = H - f.top + 80, spin = (Math.random() - .5) * 1080;
+        c.animate([
+          { transform: 'translate(0,0) rotate(0deg) rotateY(0deg)' },
+          { transform: 'translate(' + vx * .45 + 'px,' + -up + 'px) rotate(' + spin * .4 + 'deg) rotateY(300deg)', offset: .35 },
+          { transform: 'translate(' + vx + 'px,' + fall + 'px) rotate(' + spin + 'deg) rotateY(900deg)' }
+        ], { duration: 1500 + Math.random() * 700, easing: 'cubic-bezier(.3,.1,.6,1)', fill: 'forwards' }).onfinish = function () { c.remove(); };
+      }, i * 45);
+    })(i);
   }
   function overPlate(x, y) { var p = plate.getBoundingClientRect(); return x > p.left - 30 && x < p.right + 30 && y > p.top - 30 && y < p.bottom + 30; }
   function flyIn(coin, fromRect) {
@@ -85,9 +119,10 @@
   });
   function go() {
     if (!credits || leaving) return; leaving = true; jingle();
+    if (vip && hint) hint.dataset.go = 'Right this way.';
     if (hint) hint.textContent = hint.dataset.go || 'Player 1. Good luck.'; if (live) live.textContent = 'Starting.';
     if (fade) fade.classList.add('on');
-    setTimeout(function () { location.href = ARCADE; }, reduce ? 150 : 700);
+    setTimeout(function () { location.href = ARCADE + (vip ? '?vip=1' : ''); }, reduce ? 150 : 700);
   }
   start.addEventListener('click', go);
   document.addEventListener('keydown', function (e) {
