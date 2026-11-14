@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Insert Coin | Bond Bell &amp; Co</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<style>
+  :root { --navy:#16233B; --deep:#0A111E; --gold:#B98B3E; --gold-hi:#E2BE72; --gold-lo:#7A5A22; --cream:#FDF6EC; --muted:#9AA3B5; --red:#E0604A; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; height:100%; }
+  body { background:radial-gradient(120% 90% at 50% 0%, #1C2C4A 0%, var(--deep) 70%); color:var(--cream);
+    font-family:'IBM Plex Sans', system-ui, sans-serif; overflow:hidden; touch-action:none; -webkit-user-select:none; user-select:none; }
+  .wrap { min-height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px; padding:24px 16px calc(24px + env(safe-area-inset-bottom)); }
+  .back { position:fixed; top:16px; left:16px; color:var(--muted); font-size:12px; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; padding:8px; }
+  .back:hover, .back:focus-visible { color:var(--cream); }
+  .sound { position:fixed; top:16px; right:16px; background:none; border:0; color:var(--muted); font:inherit; font-size:12px; letter-spacing:.14em; text-transform:uppercase; padding:8px; cursor:pointer; }
+  .sound:hover, .sound:focus-visible { color:var(--cream); }
+
+  /* the cabinet coin door */
+  .door { position:relative; width:min(340px, 88vw); padding:26px 24px 30px; border-radius:14px;
+    background:linear-gradient(160deg, #2A3B5C, #121C30 60%, #0C1424); border:1px solid #33456A;
+    box-shadow:0 30px 60px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.08); text-align:center; }
+  .door::before, .door::after { content:""; position:absolute; width:9px; height:9px; border-radius:50%; top:12px;
+    background:radial-gradient(circle at 35% 35%, #8C96A8, #3A4559); box-shadow:inset 0 0 0 1px rgba(0,0,0,.4); }
+  .door::before { left:12px; } .door::after { right:12px; }
+  .label { font-size:13px; letter-spacing:.32em; color:var(--gold-hi); margin:0 0 18px; }
+  .label .price { color:var(--muted); letter-spacing:.2em; }
+  .slot-plate { position:relative; margin:0 auto; width:150px; height:150px; border-radius:12px;
+    background:linear-gradient(145deg, #3A4B6E, #1A2640); box-shadow:inset 0 2px 6px rgba(0,0,0,.6), 0 1px 0 rgba(255,255,255,.06);
+    display:grid; place-items:center; transition:box-shadow .2s; }
+  .slot { position:relative; width:14px; height:74px; border-radius:7px; background:#05080F;
+    box-shadow:inset 0 0 0 2px #0B1220, 0 0 0 3px #4A5B80, 0 0 18px rgba(224,96,74,.0); transition:box-shadow .25s; }
+  .slot::after { content:""; position:absolute; inset:-14px -10px; border-radius:12px; } /* bigger drop target feel */
+  .lamp { position:absolute; bottom:12px; left:50%; transform:translateX(-50%); width:44px; height:8px; border-radius:4px;
+    background:#5A2018; box-shadow:inset 0 0 0 1px rgba(0,0,0,.4); transition:background .2s, box-shadow .2s; }
+  .door.armed .slot { box-shadow:inset 0 0 0 2px #0B1220, 0 0 0 3px var(--gold), 0 0 26px rgba(226,190,114,.55); }
+  .door.armed .lamp, .door.paid .lamp, .lamp.on { background:var(--red); box-shadow:0 0 14px rgba(224,96,74,.9); }
+  .slot-plate.clunk { animation:clunk .18s ease-out; }
+  @keyframes clunk { 50% { transform:translateY(3px); } }
+
+  .credit { margin:22px 0 0; font-size:13px; letter-spacing:.3em; color:var(--muted); }
+  .credit b { display:inline-block; min-width:2ch; color:var(--cream); font-weight:500; }
+  .credit b.bump { animation:bump .35s ease-out; }
+  @keyframes bump { 40% { transform:scale(1.5); color:var(--gold-hi); } }
+
+  h1 { font-family:'Playfair Display', Georgia, serif; font-weight:400; font-size:clamp(30px, 7vw, 44px); margin:0; letter-spacing:.02em; }
+  h1 span { animation:blink 1.1s steps(2, start) infinite; }
+  @keyframes blink { to { visibility:hidden; } }
+  .hint { margin:-16px 0 0; color:var(--muted); font-size:13px; letter-spacing:.06em; text-align:center; max-width:30em; line-height:1.5; }
+
+  /* coins */
+  .tray { display:flex; gap:18px; min-height:76px; align-items:center; }
+  .coin { width:68px; height:68px; border-radius:50%; border:0; padding:0; cursor:grab; touch-action:none; position:relative;
+    background:radial-gradient(circle at 32% 28%, #FFF1C4 0%, var(--gold-hi) 18%, var(--gold) 55%, var(--gold-lo) 100%);
+    box-shadow:inset 0 0 0 4px rgba(122,90,34,.9), inset 0 0 0 6px rgba(255,236,180,.5), 0 6px 14px rgba(0,0,0,.5);
+    color:#5C421A; font-family:'Playfair Display', Georgia, serif; font-size:19px; line-height:68px; text-align:center;
+    transition:transform .15s; }
+  .coin:hover { transform:translateY(-3px) rotate(-6deg); }
+  .coin:focus-visible { outline:2px solid var(--cream); outline-offset:4px; }
+  .coin.dragging { cursor:grabbing; position:fixed; z-index:10; margin:0; transition:none; pointer-events:none;
+    box-shadow:inset 0 0 0 4px rgba(122,90,34,.9), inset 0 0 0 6px rgba(255,236,180,.5), 0 18px 30px rgba(0,0,0,.6); }
+  .coin.spent { visibility:hidden; }
+
+  .start { font:inherit; font-size:15px; letter-spacing:.3em; text-transform:uppercase; color:var(--deep); background:var(--gold-hi);
+    border:0; border-radius:999px; padding:16px 34px; cursor:pointer; box-shadow:0 0 0 0 rgba(226,190,114,.7); visibility:hidden; }
+  .start.ready { visibility:visible; animation:pulse 1.4s ease-out infinite; }
+  .start:focus-visible { outline:2px solid var(--cream); outline-offset:4px; }
+  @keyframes pulse { 0% { box-shadow:0 0 0 0 rgba(226,190,114,.6); } 100% { box-shadow:0 0 0 18px rgba(226,190,114,0); } }
+  .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  .fade { position:fixed; inset:0; background:#000; opacity:0; pointer-events:none; transition:opacity .5s; z-index:20; }
+  .fade.on { opacity:1; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation:none !important; transition:none !important; } }
+  @media (max-height:620px) { .wrap { gap:16px; } .slot-plate { width:120px; height:120px; } }
+</style>
+</head>
+<body>
+<a class="back" href="../">← Bond Bell &amp; Co</a>
+<button class="sound" type="button" aria-pressed="true">Sound on</button>
+<main class="wrap">
+  <h1>Insert coin<span>_</span></h1>
+  <p class="hint" id="hint">Drag a coin into the slot, or tap one.</p>
+  <div class="door" id="door">
+    <p class="label">25¢ <span class="price">· 1 PLAY</span></p>
+    <div class="slot-plate" id="plate"><div class="slot" id="slot"></div><div class="lamp" id="lamp"></div></div>
+    <p class="credit">CREDIT <b id="credit">0</b></p>
+  </div>
+  <div class="tray" id="tray" aria-label="Coins">
+    <button class="coin" type="button" aria-label="Insert coin">BB</button>
+    <button class="coin" type="button" aria-label="Insert coin">BB</button>
+    <button class="coin" type="button" aria-label="Insert coin">BB</button>
+  </div>
+  <button class="start" id="start" type="button">Press start</button>
+  <p class="sr" id="live" aria-live="polite"></p>
+</main>
+<div class="fade" id="fade"></div>
+<script>
+(function () {
+  var ARCADE = 'https://boardybell.com/arcade/';
+  var door = document.getElementById('door'), plate = document.getElementById('plate'), slot = document.getElementById('slot');
+  var creditEl = document.getElementById('credit'), start = document.getElementById('start'), live = document.getElementById('live');
+  var hint = document.getElementById('hint'), lamp = document.getElementById('lamp'), soundBtn = document.querySelector('.sound');
+  var credits = 0, leaving = false, soundOn = true, ac = null;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  try { if (localStorage.getItem('bbc.arcade.mute') === '1') setSound(false); } catch (_) {}
+
+  // Sounds are synthesised in the browser: no files, no requests.
+  function audio() { if (!ac) { try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (_) {} } return ac; }
+  function tone(freq, t0, dur, type, vol) {
+    var a = audio(); if (!a || !soundOn) return;
+    var o = a.createOscillator(), g = a.createGain(), t = a.currentTime + t0;
+    o.type = type || 'square'; o.frequency.setValueAtTime(freq, t);
+    g.gain.setValueAtTime(vol || 0.08, t); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g); g.connect(a.destination); o.start(t); o.stop(t + dur + 0.02);
+  }
+  function clink() { tone(2400, 0, 0.06, 'triangle', 0.12); tone(1800, 0.05, 0.08, 'triangle', 0.08); tone(140, 0.16, 0.12, 'sine', 0.25); }
+  function credit() { tone(988, 0.22, 0.08); tone(1319, 0.3, 0.22); }
+  function startJingle() { [523, 659, 784, 1047].forEach(function (f, i) { tone(f, i * 0.09, 0.14); }); }
+  function setSound(on) { soundOn = on; soundBtn.setAttribute('aria-pressed', on); soundBtn.textContent = on ? 'Sound on' : 'Sound off'; }
+  soundBtn.addEventListener('click', function () { setSound(!soundOn); try { localStorage.setItem('bbc.arcade.mute', soundOn ? '0' : '1'); } catch (_) {} });
+
+  function addCredit(coin) {
+    if (coin) { coin.classList.add('spent'); coin.hidden = true; }
+    clink(); credit();
+    plate.classList.remove('clunk'); void plate.offsetWidth; plate.classList.add('clunk');
+    credits++; creditEl.textContent = credits; door.classList.add('paid');
+    creditEl.classList.remove('bump'); void creditEl.offsetWidth; creditEl.classList.add('bump');
+    start.classList.add('ready');
+    hint.textContent = credits === 1 ? 'Credit accepted. Press start.' : credits + ' credits. Press start.';
+    live.textContent = 'Credit ' + credits + '. Press start.';
+    if (!document.querySelector('.coin:not(.spent)')) setTimeout(function () { start.focus(); }, 300);
+  }
+
+  // Fly a coin from where it is into the slot, then credit it.
+  function flyIn(coin, fromRect) {
+    if (reduce) { addCredit(coin); return; }
+    var r = fromRect || coin.getBoundingClientRect(), s = slot.getBoundingClientRect();
+    var ghost = coin.cloneNode(true); ghost.className = 'coin dragging'; ghost.removeAttribute('id');
+    ghost.style.left = r.left + 'px'; ghost.style.top = r.top + 'px'; document.body.appendChild(ghost);
+    coin.classList.add('spent');
+    var dx = s.left + s.width / 2 - (r.left + r.width / 2), dy = s.top + s.height / 2 - (r.top + r.height / 2);
+    var anim = ghost.animate([
+      { transform: 'translate(0,0) rotateY(0deg) scale(1)' },
+      { transform: 'translate(' + dx + 'px,' + (dy - 40) + 'px) rotateY(80deg) scale(.95)', offset: 0.7 },
+      { transform: 'translate(' + dx + 'px,' + (dy + 10) + 'px) rotateY(90deg) scale(.85)', opacity: 0 }
+    ], { duration: 520, easing: 'cubic-bezier(.4,0,.2,1)' });
+    anim.onfinish = function () { ghost.remove(); addCredit(coin); };
+  }
+
+  // Drag (mouse, pen and touch). A short press without movement counts as a tap.
+  document.querySelectorAll('.coin').forEach(function (coin) {
+    var drag = null;
+    coin.addEventListener('pointerdown', function (e) {
+      if (coin.classList.contains('spent')) return;
+      audio(); // unlock audio on iOS within the gesture
+      var r = coin.getBoundingClientRect();
+      drag = { id: e.pointerId, x: e.clientX, y: e.clientY, ox: e.clientX - r.left, oy: e.clientY - r.top, moved: false, ghost: null };
+      coin.setPointerCapture(e.pointerId); e.preventDefault();
+    });
+    coin.addEventListener('pointermove', function (e) {
+      if (!drag || e.pointerId !== drag.id) return;
+      if (!drag.moved && Math.hypot(e.clientX - drag.x, e.clientY - drag.y) < 6) return;
+      if (!drag.moved) {
+        drag.moved = true;
+        drag.ghost = coin.cloneNode(true); drag.ghost.className = 'coin dragging'; document.body.appendChild(drag.ghost);
+        coin.classList.add('spent'); door.classList.add('armed');
+      }
+      drag.ghost.style.left = (e.clientX - drag.ox) + 'px'; drag.ghost.style.top = (e.clientY - drag.oy) + 'px';
+      var p = plate.getBoundingClientRect(), over = e.clientX > p.left - 30 && e.clientX < p.right + 30 && e.clientY > p.top - 30 && e.clientY < p.bottom + 30;
+      lamp.classList.toggle('on', over);
+    });
+    function end(e) {
+      if (!drag || e.pointerId !== drag.id) return;
+      var d = drag; drag = null; door.classList.remove('armed'); lamp.classList.remove('on');
+      if (!d.moved) { if (e.type === 'pointerup') flyIn(coin); return; }
+      var g = d.ghost.getBoundingClientRect(), p = plate.getBoundingClientRect(), cx = g.left + g.width / 2, cy = g.top + g.height / 2;
+      d.ghost.remove();
+      if (e.type === 'pointerup' && cx > p.left - 30 && cx < p.right + 30 && cy > p.top - 30 && cy < p.bottom + 30) { flyIn(coin, g); return; }
+      coin.classList.remove('spent'); // missed the slot: coin goes back to the tray
+    }
+    coin.addEventListener('pointerup', end); coin.addEventListener('pointercancel', end);
+    coin.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (!coin.classList.contains('spent')) flyIn(coin); } });
+    coin.addEventListener('click', function (e) { if (e.detail === 0 && !coin.classList.contains('spent')) flyIn(coin); }); // assistive tech
+  });
+
+  function go() {
+    if (!credits || leaving) return; leaving = true;
+    startJingle();
+    hint.textContent = 'Player 1. Good luck.'; live.textContent = 'Starting.';
+    document.getElementById('fade').classList.add('on');
+    setTimeout(function () { location.href = ARCADE; }, reduce ? 150 : 700);
+  }
+  start.addEventListener('click', go);
+
+  // Cabinet keys: 5 inserts a coin, 1 is player-one start.
+  document.addEventListener('keydown', function (e) {
+    if (e.metaKey || e.ctrlKey || e.altKey || e.repeat) return;
+    if (e.key === '5') { var c = document.querySelector('.coin:not(.spent)'); if (c) flyIn(c); else addCredit(null); }
+    else if (e.key === '1') go();
+  });
+  // Coming back from the arcade with the back button: reset the page.
+  window.addEventListener('pageshow', function (e) { if (e.persisted) location.reload(); });
+})();
+</script>
+</body>

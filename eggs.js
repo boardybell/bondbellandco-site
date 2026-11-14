@@ -2,7 +2,8 @@
  *
  *  1. Arcade   Konami code on a keyboard (up up down down left right left right B A),
  *              or tap the "©" in the footer five times within three seconds.
- *              Opens the arcade at boardybell.com.
+ *              Opens /insert-coin/, where the visitor drops a coin in the slot and presses
+ *              start to reach the arcade at boardybell.com.
  *  2. Index    Tap the full stop at the end of "Past performance does not guarantee
  *              future results." three times within two seconds. Opens The Horniness
  *              Index. Nothing is ever added to the navigation or remembered.
@@ -10,7 +11,7 @@
 (function () {
   var script = document.currentScript;
   var root = new URL('./', script ? script.src : location.href);
-  var ARCADE = 'https://boardybell.com/arcade/';
+  var ARCADE = new URL('insert-coin/', root).href; // coin-slot page, which then opens boardybell.com/arcade/
   var HI_URL = new URL('horniness-index/', root).href;
   // Earlier builds remembered the unlock and added a nav link; clear that leftover flag.
   try { localStorage.removeItem('bbc.hi'); } catch (_) {}
@@ -55,7 +56,7 @@
     });
   }
 
-  function goArcade() { toast('Insert coin', function () { location.href = ARCADE; }); }
+  function goArcade() { location.href = ARCADE; }
   function goIndex() {
     toast('Governance review opened', function () { location.href = HI_URL; });
   }
