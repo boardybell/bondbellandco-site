@@ -4,29 +4,16 @@
  *              or tap the "©" in the footer five times within three seconds.
  *              Opens the arcade at boardybell.com.
  *  2. Index    Tap the full stop at the end of "Past performance does not guarantee
- *              future results." three times within two seconds. Unlocks The Horniness
- *              Index: the page opens and its entry joins the primary navigation on
- *              every page from then on (this browser only).
+ *              future results." three times within two seconds. Opens The Horniness
+ *              Index. Nothing is ever added to the navigation or remembered.
  */
 (function () {
   var script = document.currentScript;
   var root = new URL('./', script ? script.src : location.href);
   var ARCADE = 'https://boardybell.com/arcade/';
   var HI_URL = new URL('horniness-index/', root).href;
-  var KEY = 'bbc.hi';
-
-  function unlocked() { try { return localStorage.getItem(KEY) === '1'; } catch (_) { return false; } }
-  function unlock() { try { localStorage.setItem(KEY, '1'); } catch (_) {} }
-
-  function addNav() {
-    var nav = document.querySelector('.site-nav');
-    if (!nav || nav.querySelector('[data-hi-nav]')) return;
-    var a = document.createElement('a');
-    a.href = HI_URL;
-    a.setAttribute('data-hi-nav', '');
-    a.textContent = 'The Horniness Index';
-    nav.appendChild(a);
-  }
+  // Earlier builds remembered the unlock and added a nav link; clear that leftover flag.
+  try { localStorage.removeItem('bbc.hi'); } catch (_) {}
 
   function toast(text, then) {
     var t = document.createElement('div');
@@ -70,7 +57,6 @@
 
   function goArcade() { toast('Insert coin', function () { location.href = ARCADE; }); }
   function goIndex() {
-    unlock(); addNav();
     toast('Governance review opened', function () { location.href = HI_URL; });
   }
 
@@ -88,8 +74,6 @@
   });
 
   function init() {
-    if (location.pathname.indexOf('/horniness-index/') !== -1) unlock();
-    if (unlocked()) addNav();
     var footer = document.querySelector('.site-footer');
     if (!footer) return;
     onTaps(wrapChar(footer.querySelector('.footer-meta'), '©', 0), 5, 3000, goArcade);
