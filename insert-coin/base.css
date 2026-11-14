@@ -1,0 +1,22 @@
+/* Shared mechanics styling for the insert-coin design options. Each option adds its own look. */
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{overflow-x:hidden;-webkit-user-select:none;user-select:none;font-family:'IBM Plex Sans',system-ui,sans-serif}
+.coin{border:0;padding:0;cursor:grab;touch-action:none;position:relative;-webkit-tap-highlight-color:transparent}
+.coin:focus-visible,.start:focus-visible,.sound:focus-visible,.brand:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.coin.dragging{position:fixed;z-index:50;margin:0;cursor:grabbing;pointer-events:none;transition:none}
+.coin.spent{visibility:hidden}
+.start{visibility:hidden;cursor:pointer;font:inherit}
+.start.ready{visibility:visible}
+.sound{position:fixed;top:16px;right:16px;background:none;border:0;font:inherit;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:8px;cursor:pointer;z-index:5}
+.brand{display:inline-block;padding:6px}
+.brand img{display:block;height:48px;width:auto;max-width:78vw;object-fit:contain}
+@media (max-width:480px){.brand img{height:auto;width:min(240px,68vw)}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.fade{position:fixed;inset:0;background:#000;opacity:0;pointer-events:none;transition:opacity .5s;z-index:60}
+.fade.on{opacity:1}
+.bump{animation:bump .35s ease-out}
+@keyframes bump{40%{transform:scale(1.4)}}
+.clunk{animation:clunk .18s ease-out}
+@keyframes clunk{50%{transform:translateY(3px)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
